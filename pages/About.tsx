@@ -5,78 +5,6 @@ import { Section } from '../components/Section';
 
 export const About = () => (
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-24 pb-16">
-    <Section title="Our Founders & Inspirations" subtitle="Visionary Leaders" className="pt-8 bg-gradient-to-b from-white to-saffron-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-16 justify-items-center px-4">
-          {/* Founder 1 */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ delay: 0.2 }}
-            className="flex flex-col items-center"
-          >
-            <div className="relative mb-8">
-              {/* Circle Shape Container */}
-              <div className="w-64 h-64 bg-gradient-to-br from-saffron-100 to-saffron-200 rounded-full flex items-center justify-center overflow-hidden shadow-xl border-4 border-saffron-600">
-                <img 
-                  src="/images/founder11.png" 
-                  alt="Swami Sushar Singh Ji" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-saffron-600 text-white px-6 py-2 rounded-full shadow-lg whitespace-nowrap">
-                <p className="font-bold text-sm">संस्थापक</p>
-              </div>
-            </div>
-            <div className="mt-12 text-center">
-              <h3 className="text-2xl font-bold font-heading text-gray-900 mb-2">स्वामी सुशार सिंह जी</h3>
-              <p className="text-saffron-600 font-semibold mb-3">Founder & Visionary</p>
-              <p className="text-saffron-600 font-semibold mb-3 text-sm italic">संस्थापक एवं दूरदर्शी</p>
-              <p className="text-gray-600 text-sm leading-relaxed max-w-xs mb-4">
-                Established the Maharishi Prajapati Shiksha Samiti with a divine vision to transform lives through education.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed max-w-xs italic">
-                महार्षि प्रजापति शिक्षा समिति की स्थापना शिक्षा के माध्यम से जीवन को रूपांतरित करने के दिव्य दृष्टिकोण के साथ की।
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Founder 2 */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ delay: 0.4 }}
-            className="flex flex-col items-center"
-          >
-            <div className="relative mb-8">
-              {/* Circle Shape Container */}
-              <div className="w-64 h-64 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center overflow-hidden shadow-xl border-4 border-blue-600">
-                <img 
-                  src="/images/founder2.png" 
-                  alt="Co-Founder" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full shadow-lg whitespace-nowrap">
-                <p className="font-bold text-sm">सह-संस्थापक</p>
-              </div>
-            </div>
-            <div className="mt-12 text-center">
-              <h3 className="text-2xl font-bold font-heading text-gray-900 mb-2">Visionary Leader</h3>
-              <p className="text-blue-600 font-semibold mb-3">Co-Founder & Inspiration</p>
-              <p className="text-blue-600 font-semibold mb-3 text-sm italic">सह-संस्थापक एवं प्रेरणा</p>
-              <p className="text-gray-600 text-sm leading-relaxed max-w-xs mb-4">
-                Dedicated to empowering youth and creating sustainable educational opportunities for all.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed max-w-xs italic">
-                युवाओं को सशक्त बनाने और सभी के लिए टिकाऊ शैक्षणिक अवसर बनाने के लिए समर्पित।
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </Section>
-
     <Section title="Our Legacy" subtitle="History & Vision" className="pt-8">
       <div className="max-w-4xl mx-auto">
         <div className="prose prose-lg text-gray-600 mx-auto leading-relaxed">
@@ -98,13 +26,13 @@ export const About = () => (
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mt-16">
-          <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border-t-8 border-blue-600">
+          <div className="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-md transition-shadow">
              <h3 className="text-2xl font-bold font-heading mb-4 text-gray-900">Our Vision</h3>
              <p className="text-gray-600 mb-6">To create an enlightened society where every child, regardless of their economic background, has access to quality education and equal opportunities for growth.</p>
              <h3 className="text-xl font-bold font-heading mb-4 text-gray-900">हमारी दृष्टि</h3>
              <p className="text-gray-600 italic text-sm">एक ऐसे समाज का निर्माण करना जहाँ आर्थिक पृष्ठभूमि की परवाह किए बिना हर बच्चे को गुणवत्तापूर्ण शिक्षा और विकास के समान अवसर प्राप्त हों।</p>
           </div>
-          <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border-t-8 border-saffron-600">
+          <div className="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-md transition-shadow">
              <h3 className="text-2xl font-bold font-heading mb-4 text-gray-900">Our Mission</h3>
              <ul className="space-y-4 text-gray-600 mb-6">
                <li className="flex gap-3"><CheckCircle size={20} className="text-saffron-600 shrink-0" /> Financial support for needy students.</li>
