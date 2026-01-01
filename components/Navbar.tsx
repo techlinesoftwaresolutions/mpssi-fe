@@ -13,7 +13,7 @@ export const Navbar = ({ activePage, setActivePage, isScrolled }: NavbarProps) =
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg py-2' : 'bg-white/80 backdrop-blur-md py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div 
           className="flex items-center gap-2 cursor-pointer" 
@@ -22,7 +22,7 @@ export const Navbar = ({ activePage, setActivePage, isScrolled }: NavbarProps) =
            <div className="w-10 h-10 bg-saffron-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
              M
            </div>
-           <div className={`font-heading font-bold leading-tight ${isScrolled ? 'text-gray-900' : 'text-white shadow-sm'}`}>
+           <div className={`font-heading font-bold leading-tight ${isScrolled ? 'text-gray-900' : 'text-gray-900'}`}>
              <span className="block text-lg">Maharishi Prajapati</span>
              <span className="text-xs font-medium uppercase tracking-wider">Shiksha Samiti</span>
            </div>
@@ -37,7 +37,7 @@ export const Navbar = ({ activePage, setActivePage, isScrolled }: NavbarProps) =
               className={`text-sm font-medium transition-colors relative py-1 ${
                 activePage === link.path 
                   ? 'text-saffron-600 font-semibold' 
-                  : isScrolled ? 'text-gray-700 hover:text-saffron-600' : 'text-white/90 hover:text-white'
+                  : 'text-gray-700 hover:text-saffron-600'
               }`}
             >
               {link.name}
@@ -59,7 +59,7 @@ export const Navbar = ({ activePage, setActivePage, isScrolled }: NavbarProps) =
           className="md:hidden p-2 rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X className={isScrolled ? "text-gray-900" : "text-white"} /> : <Menu className={isScrolled ? "text-gray-900" : "text-white"} />}
+          {isOpen ? <X className="text-gray-900" /> : <Menu className="text-gray-900" />}
         </button>
       </div>
 

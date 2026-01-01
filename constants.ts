@@ -14,42 +14,59 @@ export const NAV_LINKS = [
 export const MEMBERS: Member[] = [
   {
     id: 1,
-    name: "Late Shri Ram Lal Prajapati",
+    name: "भारतीय संस्कृत",
     designation: "Founder",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
+    image: "/images/12.png",
     type: "founder",
-    bio: "The visionary who laid the foundation of the Samiti 35 years ago with a mission to educate every child in the community."
+    bio: "The visionary who laid the foundation of the Samiti with a mission to educate every child in the community. Phone: 8412820035"
   },
   {
     id: 2,
-    name: "Shri Om Prakash Prajapati",
+    name: "संस्कृत जी",
     designation: "President",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
-    type: "committee",
-    bio: "Leading the organization with dedication and focusing on modernizing education facilities."
+    image: "/images/13.png",
+    type: "founder",
+    bio: "Leading the organization with dedication and focusing on educational excellence. Phone: 9413820035"
   },
   {
     id: 3,
-    name: "Smt. Saroj Devi",
+    name: "राजीव सिंह",
     designation: "Secretary",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+    image: "/images/14.png",
     type: "committee",
-    bio: "A strong advocate for women's empowerment and girl child education within the Samiti."
+    bio: "A strong advocate for community welfare and educational initiatives. Phone: 9719693103"
   },
   {
     id: 4,
-    name: "Dr. Rajesh Kumar",
+    name: "आचार्य देवी जी",
     designation: "Treasurer",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
+    image: "/images/15.png",
     type: "committee",
-    bio: "Ensuring financial transparency and resource allocation for welfare programs."
+    bio: "Ensuring financial transparency and resource allocation for welfare programs. Phone: 9126312546"
   },
   {
     id: 5,
-    name: "Shri Vinod Kumar",
+    name: "निशिकांत कुमार देवशर्मा",
     designation: "Executive Member",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
-    type: "committee"
+    image: "/images/16.png",
+    type: "committee",
+    bio: "Dedicated to modernizing education facilities and community development. Phone: 9589217103"
+  },
+  {
+    id: 6,
+    name: "राजेश सिंह जी",
+    designation: "Executive Member",
+    image: "/images/17.png",
+    type: "committee",
+    bio: "Working tirelessly for the welfare and empowerment of the community. Phone: 9411265087"
+  },
+  {
+    id: 7,
+    name: "मुकुंद कुमार",
+    designation: "Member",
+    image: "/images/18.png",
+    type: "committee",
+    bio: "Supporting educational initiatives and community programs. Phone: 8757032106"
   }
 ];
 
@@ -87,6 +104,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { id: 4, category: 'Community', src: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800', caption: 'Food Distribution Drive' },
   { id: 5, category: 'Events', src: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&q=80&w=800', caption: 'Cultural Performance' },
   { id: 6, category: 'Students', src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800', caption: 'Science Exhibition' },
+  { id: 7, category: 'Awards', src: '/images/20.jpeg', caption: 'वर्ष 2024 के मेधावी छात्र-छात्राओं के अलंकरण समारोह के कुछ दृश्य' },
+  { id: 8, category: 'Events', src: '/images/21.jpeg', caption: '35वीं वार्षिक अलंकरण समारोह - 2024' },
 ];
 
 export const PUBLICATIONS: Publication[] = [

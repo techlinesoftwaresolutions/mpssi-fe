@@ -25,7 +25,7 @@ export const Committee = () => {
               className="bg-white p-8 rounded-[3rem] shadow-2xl max-w-sm text-center border-t-8 border-saffron-600 cursor-pointer"
               onClick={() => setSelectedMember(member)}
             >
-              <img src={member.image} alt={member.name} className="w-40 h-40 rounded-full mx-auto mb-6 object-cover border-8 border-saffron-50 shadow-inner" />
+              <img src={member.image} alt={member.name} className="w-40 h-40 rounded-full mx-auto mb-6 object-contain border-8 border-saffron-50 shadow-inner bg-gray-50" />
               <h4 className="text-2xl font-bold font-heading text-gray-900">{member.name}</h4>
               <p className="text-saffron-600 font-bold mb-4 uppercase tracking-wider text-sm">{member.designation}</p>
               <p className="text-gray-500 leading-relaxed italic line-clamp-3">"{member.bio}"</p>
@@ -42,7 +42,7 @@ export const Committee = () => {
                className="bg-white p-8 rounded-[2rem] shadow-lg text-center border border-gray-100 cursor-pointer hover:shadow-2xl transition-all"
                onClick={() => setSelectedMember(member)}
              >
-               <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+               <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full mx-auto mb-4 object-contain grayscale hover:grayscale-0 transition-all duration-500 bg-gray-50 border-4 border-gray-100" />
                <h4 className="text-lg font-bold font-heading text-gray-900">{member.name}</h4>
                <p className="text-blue-600 text-sm font-bold uppercase tracking-tighter">{member.designation}</p>
              </motion.div>
@@ -53,7 +53,7 @@ export const Committee = () => {
       <Modal isOpen={!!selectedMember} onClose={() => setSelectedMember(null)} title="Member Profile">
         {selectedMember && (
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-            <img src={selectedMember.image} alt={selectedMember.name} className="w-56 h-56 rounded-3xl object-cover shadow-xl" />
+            <img src={selectedMember.image} alt={selectedMember.name} className="w-56 h-56 rounded-3xl object-contain shadow-xl bg-gray-50 border-4 border-gray-100 p-4" />
             <div className="text-center md:text-left">
               <h4 className="text-3xl font-bold text-gray-900 font-heading">{selectedMember.name}</h4>
               <p className="text-saffron-600 font-bold text-lg mb-6 uppercase tracking-widest">{selectedMember.designation}</p>

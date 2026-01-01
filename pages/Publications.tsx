@@ -39,7 +39,18 @@ export const Publications = () => (
                 ))}
               </div>
 
-              <button className="mt-auto bg-saffron-600 text-white py-5 rounded-2xl font-black text-lg hover:bg-saffron-700 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-saffron-600/30 active:scale-95">
+              <button 
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/images/publication.pdf';
+                  link.download = 'publication.pdf';
+                  link.target = '_blank';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="mt-auto bg-saffron-600 text-white py-5 rounded-2xl font-black text-lg hover:bg-saffron-700 transition-all flex items-center justify-center gap-3 shadow-2xl shadow-saffron-600/30 active:scale-95"
+              >
                 <Download size={24} /> DOWNLOAD FULL PDF
               </button>
             </div>
