@@ -62,11 +62,15 @@ export const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }
           </ul>
         </div>
       </div>
-      <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-        <p>© 2024 Maharishi Prajapati Shiksha Samiti. All rights reserved.</p>
-        <div className="flex gap-6 mt-4 md:mt-0">
+      <div className="border-t border-gray-800 pt-8">
+        <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-500 text-center">
+          <p>© 2024 Maharishi Prajapati Shiksha Samiti. All rights reserved.</p>
+          <span className="hidden md:inline text-gray-700">|</span>
           <a href="#" className="hover:text-saffron-400 transition-colors">Privacy Policy</a>
+          <span className="hidden md:inline text-gray-700">|</span>
           <a href="#" className="hover:text-saffron-400 transition-colors">Terms of Service</a>
+          <span className="hidden md:inline text-gray-700">|</span>
+          <p>Made with <span className="text-red-500 animate-pulse">❤️</span> and care by <a href="#" className="text-saffron-400 hover:text-saffron-300 transition-colors font-semibold">Techline Software, Noida</a></p>
         </div>
       </div>
     </div>

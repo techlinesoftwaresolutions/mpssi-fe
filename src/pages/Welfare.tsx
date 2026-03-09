@@ -5,7 +5,6 @@ import { Section } from '../components/Section';
 
 export const Welfare = () => {
   const openApplicationInNewTab = () => {
-    // Construct the URL with a query parameter for the standalone form view
     const currentUrl = window.location.origin + window.location.pathname;
     window.open(`${currentUrl}?view=scholarship-form`, '_blank');
   };
@@ -67,9 +66,9 @@ export const Welfare = () => {
             <h3 className="text-4xl font-bold font-heading mb-10 text-gray-900">Required Documents</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                "Aadhar Card (Student)",
+                "Aadhaar Card (Student)",
                 "Latest Income Certificate",
-                "Previous Mark Sheet",
+                "Previous Marksheet",
                 "Active Bank Passbook",
                 "School ID Card",
                 "Recent Passport Photos"
