@@ -1,0 +1,613 @@
+{
+  "organization": {
+    "nameHi": "महर्षि प्रजापति शिक्षा समिति",
+    "nameEn": "Maharishi Prajapati Shiksha Samiti",
+    "establishedYear": 1991,
+    "foundingDate": "21 January 1991",
+    "location": "Sukhertaal, Muzaffarnagar, Uttar Pradesh",
+    "registrationNumber": "NPO/NGO123456",
+    "contactEmail": "prajapaticsf@gmail.com",
+    "contactPhone": "+91 90054 80808",
+    "address": "Prajapati Bhawan, Purun Singh Awas, Sukhertaal, Muzaffarnagar, Uttar Pradesh - 251309",
+    "website": "www.maharishi-prajapati.org",
+    "missionHi": "शिक्षा के माध्यम से समाज का विकास",
+    "missionEn": "Community development through education"
+  },
+
+  "founders": [
+    {
+      "id": 1,
+      "nameHi": "स्व. श्री संसार सिंह प्रजापति",
+      "nameEn": "Late Shri Sansar Singh Prajapati",
+      "designationHi": "संस्थापक",
+      "designationEn": "Founder",
+      "address": "मवाना, मेरठ",
+      "phone": "8412820035",
+      "image": "https://picsum.photos/seed/picsum/200/300",
+      "bio": {
+        "hi": "महार्षि प्रजापति शिक्षा समिति के दूरदर्शी संस्थापक जिन्होंने 21 जनवरी 1991 को इस संस्था की स्थापना की।",
+        "en": "The visionary founder who established the Samiti on 21 January 1991 with a mission to educate every child in the community."
+      },
+      "yearsOfService": "1991-Present",
+      "achievements": [
+        "संस्था की स्थापना 1991",
+        "35+ वर्षों की निरंतर सेवा",
+        "हजारों छात्रों का कल्याण"
+      ]
+    },
+    {
+      "id": 2,
+      "nameHi": "श्री पूरन सिंह प्रजापति",
+      "nameEn": "Shri Puran Singh Prajapati",
+      "designationHi": "सह-संस्थापक",
+      "designationEn": "Co-Founder",
+      "address": "खतौली, मुजफ्फरनगर",
+      "phone": "9413820035",
+      "image": "https://picsum.photos/seed/picsum/200/300",
+      "bio": {
+        "hi": "संस्था के निर्माण और विकास में महत्वपूर्ण भूमिका।",
+        "en": "Dedicated to empowering youth and creating sustainable educational opportunities for all."
+      },
+      "yearsOfService": "1991-Present"
+    }
+  ],
+
+  "committees": [
+    {
+      "year": 1991,
+      "termHi": "1991-1996",
+      "termEn": "1991-1996",
+      "members": [
+        {
+          "id": 1,
+          "nameHi": "संसार सिंह प्रजापति",
+          "nameEn": "Sansar Singh Prajapati",
+          "positionHi": "अध्यक्ष",
+          "positionEn": "President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 2,
+          "nameHi": "पूरन सिंह प्रजापति",
+          "nameEn": "Puran Singh Prajapati",
+          "positionHi": "सचिव",
+          "positionEn": "Secretary",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 3,
+          "nameHi": "सदस्य 1",
+          "nameEn": "Member 1",
+          "positionHi": "उप-अध्यक्ष",
+          "positionEn": "Vice President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 4,
+          "nameHi": "सदस्य 2",
+          "nameEn": "Member 2",
+          "positionHi": "कोषाध्यक्ष",
+          "positionEn": "Treasurer",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 5,
+          "nameHi": "सदस्य 3",
+          "nameEn": "Member 3",
+          "positionHi": "मंत्री",
+          "positionEn": "Minister",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 6,
+          "nameHi": "सदस्य 4",
+          "nameEn": "Member 4",
+          "positionHi": "लेखा निरीक्षक",
+          "positionEn": "Auditor",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 7,
+          "nameHi": "सदस्य 5",
+          "nameEn": "Member 5",
+          "positionHi": "कार्यकारिणी सदस्य",
+          "positionEn": "Executive Member",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 8,
+          "nameHi": "सदस्य 6",
+          "nameEn": "Member 6",
+          "positionHi": "कार्यकारिणी सदस्य",
+          "positionEn": "Executive Member",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "termHi": "1996-2001",
+      "termEn": "1996-2001",
+      "members": [
+        {
+          "id": 1,
+          "nameHi": "सदस्य 1",
+          "nameEn": "Member 1",
+          "positionHi": "अध्यक्ष",
+          "positionEn": "President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 2,
+          "nameHi": "सदस्य 2",
+          "nameEn": "Member 2",
+          "positionHi": "सचिव",
+          "positionEn": "Secretary",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 3,
+          "nameHi": "सदस्य 3",
+          "nameEn": "Member 3",
+          "positionHi": "उप-अध्यक्ष",
+          "positionEn": "Vice President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 4,
+          "nameHi": "सदस्य 4",
+          "nameEn": "Member 4",
+          "positionHi": "कोषाध्यक्ष",
+          "positionEn": "Treasurer",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 5,
+          "nameHi": "सदस्य 5",
+          "nameEn": "Member 5",
+          "positionHi": "मंत्री",
+          "positionEn": "Minister",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 6,
+          "nameHi": "सदस्य 6",
+          "nameEn": "Member 6",
+          "positionHi": "लेखा निरीक्षक",
+          "positionEn": "Auditor",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 7,
+          "nameHi": "सदस्य 7",
+          "nameEn": "Member 7",
+          "positionHi": "कार्यकारिणी सदस्य",
+          "positionEn": "Executive Member",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 8,
+          "nameHi": "सदस्य 8",
+          "nameEn": "Member 8",
+          "positionHi": "कार्यकारिणी सदस्य",
+          "positionEn": "Executive Member",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "termHi": "2001-2006",
+      "termEn": "2001-2006",
+      "members": [
+        {
+          "id": 1,
+          "nameHi": "सदस्य 1",
+          "nameEn": "Member 1",
+          "positionHi": "अध्यक्ष",
+          "positionEn": "President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 2,
+          "nameHi": "सदस्य 2",
+          "nameEn": "Member 2",
+          "positionHi": "सचिव",
+          "positionEn": "Secretary",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 3,
+          "nameHi": "सदस्य 3",
+          "nameEn": "Member 3",
+          "positionHi": "उप-अध्यक्ष",
+          "positionEn": "Vice President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 4,
+          "nameHi": "सदस्य 4",
+          "nameEn": "Member 4",
+          "positionHi": "कोषाध्यक्ष",
+          "positionEn": "Treasurer",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 5,
+          "nameHi": "सदस्य 5",
+          "nameEn": "Member 5",
+          "positionHi": "मंत्री",
+          "positionEn": "Minister",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 6,
+          "nameHi": "सदस्य 6",
+          "nameEn": "Member 6",
+          "positionHi": "लेखा निरीक्षक",
+          "positionEn": "Auditor",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 7,
+          "nameHi": "सदस्य 7",
+          "nameEn": "Member 7",
+          "positionHi": "कार्यकारिणी सदस्य",
+          "positionEn": "Executive Member",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "termHi": "2006-2011",
+      "termEn": "2006-2011",
+      "members": [
+        {
+          "id": 1,
+          "nameHi": "सदस्य 1",
+          "nameEn": "Member 1",
+          "positionHi": "अध्यक्ष",
+          "positionEn": "President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 2,
+          "nameHi": "सदस्य 2",
+          "nameEn": "Member 2",
+          "positionHi": "सचिव",
+          "positionEn": "Secretary",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 3,
+          "nameHi": "सदस्य 3",
+          "nameEn": "Member 3",
+          "positionHi": "उप-अध्यक्ष",
+          "positionEn": "Vice President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 4,
+          "nameHi": "सदस्य 4",
+          "nameEn": "Member 4",
+          "positionHi": "कोषाध्यक्ष",
+          "positionEn": "Treasurer",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 5,
+          "nameHi": "सदस्य 5",
+          "nameEn": "Member 5",
+          "positionHi": "मंत्री",
+          "positionEn": "Minister",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 6,
+          "nameHi": "सदस्य 6",
+          "nameEn": "Member 6",
+          "positionHi": "लेखा निरीक्षक",
+          "positionEn": "Auditor",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 7,
+          "nameHi": "सदस्य 7",
+          "nameEn": "Member 7",
+          "positionHi": "कार्यकारिणी सदस्य",
+          "positionEn": "Executive Member",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "termHi": "2011-2016",
+      "termEn": "2011-2016",
+      "members": [
+        {
+          "id": 1,
+          "nameHi": "सदस्य 1",
+          "nameEn": "Member 1",
+          "positionHi": "अध्यक्ष",
+          "positionEn": "President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 2,
+          "nameHi": "सदस्य 2",
+          "nameEn": "Member 2",
+          "positionHi": "सचिव",
+          "positionEn": "Secretary",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 3,
+          "nameHi": "सदस्य 3",
+          "nameEn": "Member 3",
+          "positionHi": "उप-अध्यक्ष",
+          "positionEn": "Vice President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 4,
+          "nameHi": "सदस्य 4",
+          "nameEn": "Member 4",
+          "positionHi": "कोषाध्यक्ष",
+          "positionEn": "Treasurer",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 5,
+          "nameHi": "सदस्य 5",
+          "nameEn": "Member 5",
+          "positionHi": "मंत्री",
+          "positionEn": "Minister",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "termHi": "2016-2021",
+      "termEn": "2016-2021",
+      "members": [
+        {
+          "id": 1,
+          "nameHi": "सदस्य 1",
+          "nameEn": "Member 1",
+          "positionHi": "अध्यक्ष",
+          "positionEn": "President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 2,
+          "nameHi": "सदस्य 2",
+          "nameEn": "Member 2",
+          "positionHi": "सचिव",
+          "positionEn": "Secretary",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 3,
+          "nameHi": "सदस्य 3",
+          "nameEn": "Member 3",
+          "positionHi": "उप-अध्यक्ष",
+          "positionEn": "Vice President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 4,
+          "nameHi": "सदस्य 4",
+          "nameEn": "Member 4",
+          "positionHi": "कोषाध्यक्ष",
+          "positionEn": "Treasurer",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 5,
+          "nameHi": "सदस्य 5",
+          "nameEn": "Member 5",
+          "positionHi": "मंत्री",
+          "positionEn": "Minister",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 6,
+          "nameHi": "सदस्य 6",
+          "nameEn": "Member 6",
+          "positionHi": "लेखा निरीक्षक",
+          "positionEn": "Auditor",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "termHi": "2021-2026",
+      "termEn": "2021-2026",
+      "members": [
+        {
+          "id": 1,
+          "nameHi": "सदस्य 1",
+          "nameEn": "Member 1",
+          "positionHi": "अध्यक्ष",
+          "positionEn": "President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 2,
+          "nameHi": "सदस्य 2",
+          "nameEn": "Member 2",
+          "positionHi": "सचिव",
+          "positionEn": "Secretary",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 3,
+          "nameHi": "सदस्य 3",
+          "nameEn": "Member 3",
+          "positionHi": "उप-अध्यक्ष",
+          "positionEn": "Vice President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 4,
+          "nameHi": "सदस्य 4",
+          "nameEn": "Member 4",
+          "positionHi": "कोषाध्यक्ष",
+          "positionEn": "Treasurer",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 5,
+          "nameHi": "सदस्य 5",
+          "nameEn": "Member 5",
+          "positionHi": "मंत्री",
+          "positionEn": "Minister",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 6,
+          "nameHi": "सदस्य 6",
+          "nameEn": "Member 6",
+          "positionHi": "लेखा निरीक्षक",
+          "positionEn": "Auditor",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 7,
+          "nameHi": "सदस्य 7",
+          "nameEn": "Member 7",
+          "positionHi": "कार्यकारिणी सदस्य",
+          "positionEn": "Executive Member",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "termHi": "2026 onwards",
+      "termEn": "2026 onwards",
+      "members": [
+        {
+          "id": 1,
+          "nameHi": "सदस्य 1",
+          "nameEn": "Member 1",
+          "positionHi": "अध्यक्ष",
+          "positionEn": "President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 2,
+          "nameHi": "सदस्य 2",
+          "nameEn": "Member 2",
+          "positionHi": "सचिव",
+          "positionEn": "Secretary",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 3,
+          "nameHi": "सदस्य 3",
+          "nameEn": "Member 3",
+          "positionHi": "उप-अध्यक्ष",
+          "positionEn": "Vice President",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 4,
+          "nameHi": "सदस्य 4",
+          "nameEn": "Member 4",
+          "positionHi": "कोषाध्यक्ष",
+          "positionEn": "Treasurer",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        },
+        {
+          "id": 5,
+          "nameHi": "सदस्य 5",
+          "nameEn": "Member 5",
+          "positionHi": "मंत्री",
+          "positionEn": "Minister",
+          "image": "https://picsum.photos/seed/picsum/200/300"
+        }
+      ]
+    }
+  ],
+
+  "donors": [
+    {
+      "id": 1,
+      "nameHi": "दाता 1",
+      "nameEn": "Donor 1",
+      "organizationHi": "संस्था 1",
+      "organizationEn": "Organization 1",
+      "donationTypeHi": "शिक्षा समर्थन",
+      "donationTypeEn": "Educational Support",
+      "image": "https://picsum.photos/seed/picsum/200/300"
+    },
+    {
+      "id": 2,
+      "nameHi": "दाता 2",
+      "nameEn": "Donor 2",
+      "organizationHi": "संस्था 2",
+      "organizationEn": "Organization 2",
+      "donationTypeHi": "बुनियादी ढांचा",
+      "donationTypeEn": "Infrastructure",
+      "image": "https://picsum.photos/seed/picsum/200/300"
+    },
+    {
+      "id": 3,
+      "nameHi": "दाता 3",
+      "nameEn": "Donor 3",
+      "organizationHi": "संस्था 3",
+      "organizationEn": "Organization 3",
+      "donationTypeHi": "कल्याण कार्यक्रम",
+      "donationTypeEn": "Welfare Programs",
+      "image": "https://picsum.photos/seed/picsum/200/300"
+    }
+  ],
+
+  "patrons": [
+    {
+      "id": 1,
+      "nameHi": "संरक्षक 1",
+      "nameEn": "Patron 1",
+      "designationHi": "मुख्य संरक्षक",
+      "designationEn": "Chief Patron",
+      "organizationHi": "संस्था 1",
+      "organizationEn": "Organization 1",
+      "image": "https://picsum.photos/seed/picsum/200/300"
+    },
+    {
+      "id": 2,
+      "nameHi": "संरक्षक 2",
+      "nameEn": "Patron 2",
+      "designationHi": "संरक्षक",
+      "designationEn": "Patron",
+      "organizationHi": "संस्था 2",
+      "organizationEn": "Organization 2",
+      "image": "https://picsum.photos/seed/picsum/200/300"
+    },
+    {
+      "id": 3,
+      "nameHi": "संरक्षक 3",
+      "nameEn": "Patron 3",
+      "designationHi": "संरक्षक",
+      "designationEn": "Patron",
+      "organizationHi": "संस्था 3",
+      "organizationEn": "Organization 3",
+      "image": "https://picsum.photos/seed/picsum/200/300"
+    }
+  ],
+
+  "statistics": {
+    "yearsOfService": 35,
+    "studentsHelped": 5000,
+    "scholarshipsAwarded": 2500,
+    "eventsOrganized": 150,
+    "activeMembers": 10,
+    "communityReach": "50000+"
+  }
+}
+

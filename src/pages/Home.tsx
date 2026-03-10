@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, BookOpen, Users, Award, Heart, ZoomIn } from 'lucide-react';
 import { Section } from '../components/Section';
+import ProfileCard from '../components/ProfileCard';
 import { EVENTS, HOME_HIGHLIGHTS } from '../constants';
+import teamData from '../data/teamData.json';
 import { HighlightItem } from '../types';
 
 export const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
@@ -10,7 +12,7 @@ export const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) 
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-      {/* Founders Section */}
+      {/* Founders Section - Dynamic from teamData */}
       <section className="w-full py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-saffron-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12 md:mb-14 lg:mb-16">
@@ -18,71 +20,25 @@ export const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) 
             <p className="text-sm sm:text-base md:text-lg text-gray-600">Visionary Leaders</p>
           </div>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-16 justify-items-center">
-              {/* Founder 1 */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ delay: 0.2 }}
-                className="flex flex-col items-center w-full max-w-sm"
-              >
-                <div className="relative mb-6 sm:mb-8 md:mb-10 lg:mb-12 w-48 sm:w-56 md:w-64 aspect-square group">
-                  
-                  <div className="w-full h-full bg-gradient-to-br from-saffron-100 via-saffron-50 to-saffron-100 rounded-full flex items-center justify-center overflow-hidden shadow-lg sm:shadow-xl hover:shadow-2xl border-4 border-saffron-600 transition-all duration-300 group-hover:scale-105">
-                    <img 
-                      src="/images/founder11.png" 
-                      alt="श्री पूरन सिंह प्रजापति" 
-                      className="w-full h-full object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 transform -translate-x-1/2 bg-saffron-600 text-white px-3 sm:px-6 py-1 sm:py-2 rounded-full shadow-md sm:shadow-lg whitespace-nowrap">
-                    <p className="font-bold text-xs sm:text-sm">संस्थापक</p>
-                  </div>
-                </div>
-                <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 text-center">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold font-heading text-gray-900 mb-2 sm:mb-3">स्व. श्री संसार सिंह प्रजापति ,प्रवक्ता भौतिक विज्ञान निवासी-मवाना ,मेरठ</h3>
-                  <p className="text-saffron-600 font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Founder & Visionary</p>
-                  <p className="text-saffron-600 font-semibold mb-3 sm:mb-4 text-xs sm:text-sm italic">संस्थापक एवं दूरदर्शी</p>
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-sm mx-auto mb-3 sm:mb-4">
-                    Established the Maharishi Prajapati Shiksha Samiti with a divine vision to transform lives through education.
-                  </p>
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-sm mx-auto italic">
-                    महार्षि प्रजापति शिक्षा समिति की स्थापना शिक्षा के माध्यम से जीवन को रूपांतरित करने के दिव्य दृष्टिकोण के साथ की।
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Founder 2 */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ delay: 0.4 }}
-                className="flex flex-col items-center w-full max-w-sm"
-              >
-                <div className="relative mb-6 sm:mb-8 md:mb-10 lg:mb-12 w-48 sm:w-56 md:w-64 aspect-square group">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-100 via-blue-50 to-blue-100 rounded-full flex items-center justify-center overflow-hidden shadow-lg sm:shadow-xl hover:shadow-2xl border-4 border-blue-600 transition-all duration-300 group-hover:scale-105">
-                    <img 
-                      src="/images/founder2.png" 
-                      alt="Co-Founder" 
-                      className="w-full h-full object-cover rounded-full transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-3 sm:px-6 py-1 sm:py-2 rounded-full shadow-md sm:shadow-lg whitespace-nowrap">
-                    <p className="font-bold text-xs sm:text-sm">सह-संस्थापक</p>
-                  </div>
-                </div>
-                <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 text-center">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold font-heading text-gray-900 mb-2 sm:mb-3">श्री पूरन सिंह प्रजापति, खतौली, मुजफ्फरनगर</h3>
-                  <p className="text-blue-600 font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Co-Founder & Inspiration</p>
-                  <p className="text-blue-600 font-semibold mb-3 sm:mb-4 text-xs sm:text-sm italic">सह-संस्थापक एवं प्रेरणा</p>
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-sm mx-auto mb-3 sm:mb-4">
-                    Dedicated to empowering youth and creating sustainable educational opportunities for all.
-                  </p>
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-sm mx-auto italic">
-                    युवाओं को सशक्त बनाने और सभी के लिए टिकाऊ शैक्षणिक अवसर बनाने के लिए समर्पित।
-                  </p>
-                </div>
-              </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 justify-items-center">
+              {teamData.founders.map((founder, index) => (
+                <motion.div
+                  key={founder.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2 }}
+                >
+                  <ProfileCard
+                    image={founder.image}
+                    nameHi={founder.nameHi}
+                    nameEn={founder.nameEn}
+                    designationHi={founder.designationHi}
+                    designationEn={founder.designationEn}
+                    bioHi={founder.bio?.hi}
+                    bioEn={founder.bio?.en}
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
