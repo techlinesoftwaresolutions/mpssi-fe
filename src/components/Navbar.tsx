@@ -2,14 +2,10 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_LINKS } from '../constants';
+import { useNavigation } from '../contexts/NavigationContext';
 
-interface NavbarProps {
-  activePage: string;
-  setActivePage: (page: string) => void;
-  isScrolled: boolean;
-}
-
-export const Navbar = ({ activePage, setActivePage, isScrolled }: NavbarProps) => {
+export const Navbar = () => {
+  const { activePage, setActivePage, isScrolled } = useNavigation();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -90,7 +86,7 @@ export const Navbar = ({ activePage, setActivePage, isScrolled }: NavbarProps) =
                   setActivePage('contact');
                   setIsOpen(false);
                 }}
-                className="bg-saffron-600 text-white px-5 py-4 rounded-xl text-center font-bold shadow-lg mt-2"
+                className="bg-saffron-600 text-white px-5 py-2 rounded-lg text-center font-medium"
               >
                 Donate Now
               </button>

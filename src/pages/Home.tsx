@@ -6,8 +6,10 @@ import ProfileCard from '../components/ProfileCard';
 import { EVENTS, HOME_HIGHLIGHTS } from '../constants';
 import teamData from '../data/teamData.json';
 import { HighlightItem } from '../types';
+import { useNavigation } from '../contexts/NavigationContext';
 
-export const Home = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
+export const Home = () => {
+  const { setActivePage } = useNavigation();
   const [selectedHighlight, setSelectedHighlight] = useState<HighlightItem | null>(null);
 
   return (

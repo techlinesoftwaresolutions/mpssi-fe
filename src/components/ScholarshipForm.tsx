@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const ScholarshipForm = ({ onClose }: { onClose: () => void }) => {
   const [formData, setFormData] = useState({

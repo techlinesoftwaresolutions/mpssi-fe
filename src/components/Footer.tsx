@@ -1,8 +1,12 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, ChevronRight } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
+import { useNavigation } from '../contexts/NavigationContext';
 
-export const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => (
+export const Footer = () => {
+  const { setActivePage } = useNavigation();
+  
+  return (
   <footer className="bg-gray-900 text-gray-300 pt-20 pb-10">
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-12 mb-16">
@@ -75,4 +79,5 @@ export const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }
       </div>
     </div>
   </footer>
-);
+  );
+};

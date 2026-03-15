@@ -1,73 +1,15 @@
-import { Member, EventItem, GalleryItem, Publication, HighlightItem } from './types';
+import { EventItem, GalleryItem, Publication, HighlightItem, Patron } from './types';
 
 export const NAV_LINKS = [
   { name: 'Home', path: 'home' },
   { name: 'About Us', path: 'about' },
   { name: 'Committee', path: 'committee' },
   { name: 'Events', path: 'events' },
+  { name: 'Patrons', path: 'patrons' },
   { name: 'Publications', path: 'publications' },
   { name: 'Gallery', path: 'gallery' },
   { name: 'Welfare', path: 'welfare' },
   { name: 'Contact', path: 'contact' },
-];
-
-export const MEMBERS: Member[] = [
-  {
-    id: 1,
-    name: "भारतीय संस्कृत",
-    designation: "Founder",
-    image: "/images/12.png",
-    type: "founder",
-    bio: "The visionary who laid the foundation of the Samiti with a mission to educate every child in the community. Phone: 8412820035"
-  },
-  {
-    id: 2,
-    name: "संस्कृत जी",
-    designation: "President",
-    image: "/images/13.png",
-    type: "founder",
-    bio: "Leading the organization with dedication and focusing on educational excellence. Phone: 9413820035"
-  },
-  {
-    id: 3,
-    name: "राजीव सिंह",
-    designation: "Secretary",
-    image: "/images/14.png",
-    type: "committee",
-    bio: "A strong advocate for community welfare and educational initiatives. Phone: 9719693103"
-  },
-  {
-    id: 4,
-    name: "आचार्य देवी जी",
-    designation: "Treasurer",
-    image: "/images/15.png",
-    type: "committee",
-    bio: "Ensuring financial transparency and resource allocation for welfare programs. Phone: 9126312546"
-  },
-  {
-    id: 5,
-    name: "निशिकांत कुमार देवशर्मा",
-    designation: "Executive Member",
-    image: "/images/16.png",
-    type: "committee",
-    bio: "Dedicated to modernizing education facilities and community development. Phone: 9589217103"
-  },
-  {
-    id: 6,
-    name: "राजेश सिंह जी",
-    designation: "Executive Member",
-    image: "/images/17.png",
-    type: "committee",
-    bio: "Working tirelessly for the welfare and empowerment of the community. Phone: 9411265087"
-  },
-  {
-    id: 7,
-    name: "मुकुंद कुमार",
-    designation: "Member",
-    image: "/images/18.png",
-    type: "committee",
-    bio: "Supporting educational initiatives and community programs. Phone: 8757032106"
-  }
 ];
 
 export const EVENTS: EventItem[] = [
@@ -99,13 +41,13 @@ export const EVENTS: EventItem[] = [
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   { id: 1, category: 'Events', src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800', caption: 'Annual Function 2023' },
-  { id: 2, category: 'Students', src: 'https://images.unsplash.com/photo-1427504494785-3a9ca280155c?auto=format&fit=crop&q=80&w=800', caption: 'Classroom Session' },
+  { id: 2, category: 'Students', src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800', caption: 'Classroom Session' },
   { id: 3, category: 'Awards', src: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&q=80&w=800', caption: 'Best Student Award' },
   { id: 4, category: 'Community', src: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800', caption: 'Food Distribution Drive' },
   { id: 5, category: 'Events', src: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&q=80&w=800', caption: 'Cultural Performance' },
   { id: 6, category: 'Students', src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800', caption: 'Science Exhibition' },
-  { id: 7, category: 'Awards', src: '/images/20.jpeg', caption: 'वर्ष 2024 के मेधावी छात्र-छात्राओं के अलंकरण समारोह के कुछ दृश्य' },
-  { id: 8, category: 'Events', src: '/images/21.jpeg', caption: '35वीं वार्षिक अलंकरण समारोह - 2024' },
+  { id: 7, category: 'Awards', src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800', caption: 'वर्ष 2024 के मेधावी छात्र-छात्राओं के अलंकरण समारोह के कुछ दृश्य' },
+  { id: 8, category: 'Events', src: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&q=80&w=800', caption: '35वीं वार्षिक अलंकरण समारोह - 2024' },
 ];
 
 export const PUBLICATIONS: Publication[] = [
@@ -170,4 +112,79 @@ export const HOME_HIGHLIGHTS: HighlightItem[] = [
     caption: "Community Gathering & Celebrations",
     span: "col-span-1"
   },
+];
+
+export const PATRONS: Patron[] = [
+  {
+    id: 1,
+    name: "श्री राजीव कुमार",
+    address: "मवाना, मेरठ, उत्तर प्रदेश - 250411",
+    totalDonation: "₹50,00,000",
+    currentYearDonation: "₹10,00,000",
+    joiningYear: 2015,
+    image: "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    id: 2,
+    name: "श्रीमती सुनीता शर्मा",
+    address: "खतौली, मुजफ्फरनगर, उत्तर प्रदेश - 251315",
+    totalDonation: "₹35,50,000",
+    currentYearDonation: "₹7,50,000",
+    joiningYear: 2018,
+    image: "https://randomuser.me/api/portraits/women/1.jpg"
+  },
+  {
+    id: 3,
+    name: "श्री अजय प्रजापति",
+    address: "शुकतीर्थ, मुजफ्फरनगर, उत्तर प्रदेश - 251309",
+    totalDonation: "₹42,00,000",
+    currentYearDonation: "₹8,50,000",
+    joiningYear: 2016,
+    image: "https://randomuser.me/api/portraits/men/2.jpg"
+  },
+  {
+    id: 4,
+    name: "श्री विजय सिंह",
+    address: "दिल्ली, भारत - 110001",
+    totalDonation: "₹60,00,000",
+    currentYearDonation: "₹12,00,000",
+    joiningYear: 2014,
+    image: "https://randomuser.me/api/portraits/men/3.jpg"
+  },
+  {
+    id: 5,
+    name: "डॉ. राज कुमार चौधरी",
+    address: "गाजियाबाद, उत्तर प्रदेश - 201001",
+    totalDonation: "₹55,75,000",
+    currentYearDonation: "₹11,00,000",
+    joiningYear: 2017,
+    image: "https://randomuser.me/api/portraits/men/4.jpg"
+  },
+  {
+    id: 6,
+    name: "श्रीमती प्रिया वर्मा",
+    address: "नोएडा, उत्तर प्रदेश - 201309",
+    totalDonation: "₹38,25,000",
+    currentYearDonation: "₹8,00,000",
+    joiningYear: 2019,
+    image: "https://randomuser.me/api/portraits/women/2.jpg"
+  },
+  {
+    id: 7,
+    name: "श्री संजय पटेल",
+    address: "लखनऊ, उत्तर प्रदेश - 226001",
+    totalDonation: "₹45,50,000",
+    currentYearDonation: "₹9,25,000",
+    joiningYear: 2015,
+    image: "https://randomuser.me/api/portraits/men/5.jpg"
+  },
+  {
+    id: 8,
+    name: "श्री मोहन शर्मा",
+    address: "आगरा, उत्तर प्रदेश - 282001",
+    totalDonation: "₹32,00,000",
+    currentYearDonation: "₹6,75,000",
+    joiningYear: 2020,
+    image: "https://randomuser.me/api/portraits/men/6.jpg"
+  }
 ];

@@ -52,7 +52,7 @@ export const Welfare = () => {
               onClick={openApplicationInNewTab}
               className="w-full bg-saffron-600 text-white py-6 rounded-3xl font-black text-xl hover:bg-saffron-700 transition-all shadow-2xl shadow-saffron-600/30 flex items-center justify-center gap-3 active:scale-95"
             >
-              Apply Now  <ExternalLink size={0} />
+              Apply Now  <ExternalLink size={20} />
             </button>
             <p className="text-center text-gray-400 text-sm mt-4">Clicking opens the official form in a new window</p>
           </motion.div>

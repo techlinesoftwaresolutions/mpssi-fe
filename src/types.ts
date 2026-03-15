@@ -39,3 +39,13 @@ export interface HighlightItem {
   caption?: string;
   span?: string; // For grid layout control (e.g., 'row-span-2')
 }
+
+export interface Patron {
+  id: number;
+  name: string;
+  address: string;
+  totalDonation: string;
+  currentYearDonation: string;
+  joiningYear: number;
+  image?: string;
+}
