@@ -1,4 +1,12 @@
+/**
+ * API Type Definitions
+ * Central location for all API-related TypeScript interfaces
+ */
+
+// ============================================================================
 // Generic API Response Types
+// ============================================================================
+
 export interface ApiResponse<T> {
   data: T;
   status: number;
@@ -6,7 +14,6 @@ export interface ApiResponse<T> {
   timestamp: string;
 }
 
-// Generic Paginated Response
 export interface PaginatedResponse<T> {
   items: T[];
   total: number;
@@ -15,7 +22,6 @@ export interface PaginatedResponse<T> {
   hasMore: boolean;
 }
 
-// Generic Error Response
 export interface ApiErrorResponse {
   status: number;
   message: string;
@@ -23,7 +29,10 @@ export interface ApiErrorResponse {
   details?: Record<string, unknown>;
 }
 
-// Placeholder Post Type (Example API)
+// ============================================================================
+// Placeholder Types (Example APIs)
+// ============================================================================
+
 export interface Post {
   userId: number;
   id: number;
@@ -31,7 +40,6 @@ export interface Post {
   body: string;
 }
 
-// Placeholder User Type (Example API)
 export interface User {
   id: number;
   name: string;
@@ -52,7 +60,6 @@ export interface User {
   };
 }
 
-// Placeholder Comment Type (Example API)
 export interface Comment {
   postId: number;
   id: number;
@@ -61,7 +68,10 @@ export interface Comment {
   body: string;
 }
 
-// Event Type (MPSS Custom)
+// ============================================================================
+// MPSS Custom Types
+// ============================================================================
+
 export interface Event {
   id: number;
   title: string;
@@ -79,7 +89,6 @@ export interface Event {
   registeredCount?: number;
 }
 
-// Request Configuration
 export interface RequestConfig {
   timeout?: number;
   retryAttempts?: number;

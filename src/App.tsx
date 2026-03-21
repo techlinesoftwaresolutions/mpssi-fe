@@ -14,6 +14,8 @@ import { Publications } from './pages/Publications';
 import { Gallery } from './pages/Gallery';
 import { Welfare } from './pages/Welfare';
 import { Contact } from './pages/Contact';
+import { ScholarshipFormPage } from './pages/ScholarshipFormPage';
+import { MeritListPage } from './pages/MeritListPage';
 import { ScholarshipForm } from './components/ScholarshipForm';
 
 const App = () => {
@@ -68,6 +70,10 @@ const App = () => {
         return <Gallery />;
       case 'welfare':
         return <Welfare />;
+      case 'scholarship':
+        return <ScholarshipFormPage />;
+      case 'meritlist':
+        return <MeritListPage />;
       case 'contact':
         return <Contact />;
       default:

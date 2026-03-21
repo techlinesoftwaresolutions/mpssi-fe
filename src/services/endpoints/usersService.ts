@@ -1,6 +1,6 @@
 import { HttpClient } from '@/services/api/httpClient';
 import { API_ENDPOINTS } from '@/config/apiConfig';
-import { User, PaginatedResponse } from '@/services/types/api.types';
+import type { User, PaginatedResponse } from '@/services/types';
 
 /**
  * Users Service - Handles all user-related API calls

@@ -1,6 +1,6 @@
 import { HttpClient } from '@/services/api/httpClient';
 import { API_ENDPOINTS } from '@/config/apiConfig';
-import { Post, PaginatedResponse } from '@/services/types/api.types';
+import type { Post, PaginatedResponse } from '@/services/types';
 
 /**
  * Posts Service - Handles all post-related API calls

@@ -1,0 +1,1 @@
+export { MeritFormPresenter } from './MeritFormPresenter';

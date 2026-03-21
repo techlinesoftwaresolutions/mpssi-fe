@@ -9,7 +9,7 @@ export { HttpClient } from '@/services/api/httpClient';
 export { axiosClient } from '@/services/api/axiosInstance';
 
 // Types
-export {
+export type {
   ApiResponse,
   PaginatedResponse,
   ApiErrorResponse,
@@ -18,7 +18,7 @@ export {
   Comment,
   Event,
   RequestConfig,
-} from '@/services/types/api.types';
+} from '@/services/types';
 
 // Configuration
 export { API_CONFIG, API_ENDPOINTS } from '@/config/apiConfig';

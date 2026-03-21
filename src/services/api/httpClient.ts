@@ -1,10 +1,10 @@
 import { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { axiosClient } from '@/services/api/axiosInstance';
-import {
+import type {
   ApiResponse,
   ApiErrorResponse,
   PaginatedResponse,
-} from '@/services/types/api.types';
+} from '@/services/types';
 
 /**
  * HTTP Client Service - Centralized API communication

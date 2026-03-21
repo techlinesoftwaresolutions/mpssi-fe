@@ -5,7 +5,7 @@ import axios, {
   AxiosResponse,
 } from 'axios';
 import { API_CONFIG } from '@/config/apiConfig';
-import { ApiErrorResponse } from '@/services/types/api.types';
+import type { ApiErrorResponse } from '@/services/types';
 
 class AxiosClient {
   private instance: AxiosInstance;

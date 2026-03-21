@@ -30,7 +30,7 @@ export const Navbar = () => {
             <button
               key={link.path}
               onClick={() => setActivePage(link.path)}
-              className={`text-sm font-medium transition-colors relative py-1 ${
+              className={`text-xs font-medium transition-colors relative py-1 ${
                 activePage === link.path 
                   ? 'text-saffron-600 font-semibold' 
                   : 'text-gray-700 hover:text-saffron-600'

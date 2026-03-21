@@ -9,6 +9,8 @@ export const NAV_LINKS = [
   { name: 'Publications', path: 'publications' },
   { name: 'Gallery', path: 'gallery' },
   { name: 'Welfare', path: 'welfare' },
+  { name: 'Scholarship', path: 'scholarship' },
+  { name: 'Merit List', path: 'meritlist' },
   { name: 'Contact', path: 'contact' },
 ];
 

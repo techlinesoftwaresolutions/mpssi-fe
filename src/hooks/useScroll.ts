@@ -15,3 +15,6 @@ export const useScrollToTop = (dependencies: unknown[] = []) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, dependencies);
 };
+
+// Alias for backward compatibility - default to scroll to top on mount
+export const useScroll = useScrollToTop;

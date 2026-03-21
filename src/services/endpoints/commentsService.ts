@@ -1,6 +1,6 @@
 import { HttpClient } from '@/services/api/httpClient';
 import { API_ENDPOINTS } from '@/config/apiConfig';
-import { Comment, PaginatedResponse } from '@/services/types/api.types';
+import type { Comment, PaginatedResponse } from '@/services/types';
 
 /**
  * Comments Service - Handles all comment-related API calls

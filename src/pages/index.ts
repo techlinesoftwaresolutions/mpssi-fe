@@ -7,4 +7,6 @@ export { Patrons } from './Patrons';
 export { Gallery } from './Gallery';
 export { Publications } from './Publications';
 export { Welfare } from './Welfare';
+export { ScholarshipFormPage } from './ScholarshipFormPage';
+export { MeritListPage } from './MeritListPage';
 export { default as APIExample } from './APIExample';

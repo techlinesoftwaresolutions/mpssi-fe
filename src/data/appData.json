@@ -1,0 +1,368 @@
+{
+  "organization": {
+    "nameHi": "महर्षि प्रजापति शिक्षा समिति",
+    "nameEn": "Maharishi Prajapati Shiksha Samiti",
+    "establishedYear": 1991,
+    "foundingDate": "21 January 1991",
+    "location": "Sukhertaal, Muzaffarnagar, Uttar Pradesh",
+    "registrationNumber": "NPO/NGO123456",
+    "contactEmail": "prajapaticsf@gmail.com",
+    "contactPhone": "+91 90054 80808",
+    "address": "Prajapati Bhawan, Purun Singh Awas, Sukhertaal, Muzaffarnagar, Uttar Pradesh - 251309",
+    "website": "www.maharishi-prajapati.org",
+    "missionHi": "शिक्षा के माध्यम से समाज का विकास",
+    "missionEn": "Community development through education"
+  },
+
+  "home": {
+    "hero": {
+      "badge": "Legacy of 35 Years",
+      "titleParts": {
+        "en": {
+          "line1": "Shaping Bright Futures,",
+          "highlight1": "Bright",
+          "line2": "Strengthening Community",
+          "highlight2": "Community"
+        },
+        "hi": {
+          "line1": "उज्जवल भविष्य का निर्माण,",
+          "highlight1": "उज्जवल",
+          "line2": "समुदाय को मजबूत करना",
+          "highlight2": "समुदाय"
+        }
+      },
+      "description": "Empowering students through education and social welfare initiatives in Sukhertaal, Muzaffarnagar since 1989.",
+      "backgroundImage": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=2000",
+      "ctaButtons": [
+        {
+          "id": 1,
+          "label": "View Magazine",
+          "labelHi": "पत्रिका देखें",
+          "action": "publications",
+          "icon": "BookOpen",
+          "variant": "primary"
+        },
+        {
+          "id": 2,
+          "label": "Our Legacy",
+          "labelHi": "हमारी विरासत",
+          "action": "about",
+          "icon": "ArrowRight",
+          "variant": "secondary"
+        }
+      ]
+    },
+
+    "stats": [
+      {
+        "id": 1,
+        "icon": "Users",
+        "count": "5000+",
+        "label": "Alumni Network",
+        "labelHi": "पूर्व छात्र नेटवर्क"
+      },
+      {
+        "id": 2,
+        "icon": "Award",
+        "count": "35+",
+        "label": "Years of Service",
+        "labelHi": "सेवा के वर्ष"
+      },
+      {
+        "id": 3,
+        "icon": "Heart",
+        "count": "100+",
+        "label": "Welfare Projects",
+        "labelHi": "कल्याण परियोजनाएं"
+      }
+    ],
+
+    "highlights": {
+      "sectionTitle": "Community Spotlight",
+      "sectionTitleHi": "समुदाय की झलकियां",
+      "sectionSubtitle": "Updates & Memories",
+      "sectionSubtitleHi": "अपडेट और यादें",
+      "items": [
+        {
+          "id": 1,
+          "src": "https://placehold.co/800x1200/E9730F/white?text=35th+Annual+Alankaran+Samaroh+Poster",
+          "alt": "35th Annual Alankaran Samaroh Poster",
+          "altHi": "35वीं वार्षिक अलंकरण समारोह पोस्टर",
+          "caption": "35th Annual Alankaran Samaroh - 14th Sept 2025",
+          "captionHi": "35वीं वार्षिक अलंकरण समारोह - 14 सितंबर 2025",
+          "span": "row-span-2"
+        },
+        {
+          "id": 2,
+          "src": "https://placehold.co/800x1200/1E3A8A/white?text=Family+Tribute+%26+Blessings",
+          "alt": "Family Tribute - Lucrose Group",
+          "altHi": "पारिवारिक श्रद्धांजलि",
+          "caption": "In Memory of Late Smt. Shanti Devi & Shri Jhabbar Singh",
+          "captionHi": "दिवंगत श्रीमती शांति देवी और श्री झब्बर सिंह की स्मृति में",
+          "span": "row-span-2"
+        },
+        {
+          "id": 3,
+          "src": "https://placehold.co/800x600/darkgreen/white?text=Alankaran+Ceremony+Highlights",
+          "alt": "Award Ceremony Collage 1",
+          "altHi": "पुरस्कार समारोह",
+          "caption": "Honoring Meritorious Students",
+          "captionHi": "मेधावी छात्रों का सम्मान",
+          "span": "col-span-1"
+        },
+        {
+          "id": 4,
+          "src": "https://placehold.co/800x1200/purple/white?text=Udit+Chain+Manufacturing+Ad",
+          "alt": "Udit Chain Manufacturing",
+          "altHi": "उदित चेन निर्माण",
+          "caption": "Hearty Congratulations to the Community",
+          "captionHi": "समुदाय को हार्दिक बधाई",
+          "span": "row-span-2"
+        },
+        {
+          "id": 5,
+          "src": "https://placehold.co/800x1200/black/white?text=Shraddhanjali+Tribute+Poster",
+          "alt": "Shraddhanjali Tribute",
+          "altHi": "श्रद्धांजलि",
+          "caption": "Heartfelt Tribute to Late Shri Jhabbar Singh Prajapati",
+          "captionHi": "दिवंगत श्री झब्बर सिंह प्रजापति को श्रद्धांजलि",
+          "span": "row-span-2"
+        },
+        {
+          "id": 6,
+          "src": "https://placehold.co/800x1200/FFC107/black?text=Prajapati+Foundation+Aid",
+          "alt": "Prajapati Foundation Financial Aid",
+          "altHi": "प्रजापति फाउंडेशन वित्तीय सहायता",
+          "caption": "Financial Assistance Program Details",
+          "captionHi": "वित्तीय सहायता कार्यक्रम विवरण",
+          "span": "row-span-2"
+        },
+        {
+          "id": 7,
+          "src": "https://placehold.co/800x600/darkred/white?text=Community+Gathering+Collage",
+          "alt": "Event Highlights 2",
+          "altHi": "समुदाय समारोह",
+          "caption": "Community Gathering & Celebrations",
+          "captionHi": "समुदाय समारोह और समारोह",
+          "span": "col-span-1"
+        }
+      ]
+    }
+  },
+
+  "founders": [
+    {
+      "id": 1,
+      "nameHi": "स्व. श्री संसार सिंह प्रजापति",
+      "nameEn": "Late Shri Sansar Singh Prajapati",
+      "designationHi": "संस्थापक",
+      "designationEn": "Founder",
+      "address": "मवाना, मेरठ",
+      "phone": "8412820035",
+      "image": "https://i.pravatar.cc/250?img=1",
+      "bio": {
+        "hi": "महार्षि प्रजापति शिक्षा समिति के दूरदर्शी संस्थापक जिन्होंने 21 जनवरी 1991 को इस संस्था की स्थापना की।",
+        "en": "The visionary founder who established the Samiti on 21 January 1991 with a mission to educate every child in the community."
+      },
+      "yearsOfService": "1991-Present",
+      "achievements": [
+        "संस्था की स्थापना 1991",
+        "35+ वर्षों की निरंतर सेवा",
+        "हजारों छात्रों का कल्याण"
+      ]
+    },
+    {
+      "id": 2,
+      "nameHi": "श्री पूरन सिंह प्रजापति",
+      "nameEn": "Shri Puran Singh Prajapati",
+      "designationHi": "सह-संस्थापक",
+      "designationEn": "Co-Founder",
+      "address": "खतौली, मुजफ्फरनगर",
+      "phone": "9413820035",
+      "image": "https://i.pravatar.cc/250?img=2",
+      "bio": {
+        "hi": "संस्था के निर्माण और विकास में महत्वपूर्ण भूमिका।",
+        "en": "Dedicated to empowering youth and creating sustainable educational opportunities for all."
+      },
+      "yearsOfService": "1991-Present"
+    }
+  ],
+
+  "events": [
+    {
+      "id": 1,
+      "title": "35th Annual Alankaran Samaroh",
+      "titleHi": "35वीं वार्षिक अलंकरण समारोह",
+      "date": "November 14, 2024",
+      "dateHi": "14 नवंबर, 2024",
+      "category": "Award",
+      "categoryHi": "पुरस्कार",
+      "description": "Celebrating excellence in education and honoring meritorious students from across the district.",
+      "descriptionHi": "शिक्षा में उत्कृष्टता का जश्न और पूरे जिले से मेधावी छात्रों का सम्मान।",
+      "image": "https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      "id": 2,
+      "title": "Community Health Camp",
+      "titleHi": "सामुदायिक स्वास्थ्य शिविर",
+      "date": "October 02, 2024",
+      "dateHi": "2 अक्टूबर, 2024",
+      "category": "Social",
+      "categoryHi": "सामाजिक",
+      "description": "Free health checkup camp organized for the residents of Sukhertaal and nearby villages.",
+      "descriptionHi": "शुकतीर्थ और पास के गांवों के निवासियों के लिए आयोजित मुफ्त स्वास्थ्य जांच शिविर।",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"
+    },
+    {
+      "id": 3,
+      "title": "Scholarship Distribution Ceremony",
+      "titleHi": "छात्रवृत्ति वितरण समारोह",
+      "date": "August 15, 2024",
+      "dateHi": "15 अगस्त, 2024",
+      "category": "Education",
+      "categoryHi": "शिक्षा",
+      "description": "Financial aid distributed to 50+ underprivileged students to support their higher education.",
+      "descriptionHi": "50+ वंचित छात्रों को उच्च शिक्षा समर्थन के लिए आर्थिक सहायता वितरित की गई।",
+      "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
+    }
+  ],
+
+  "gallery": [
+    {
+      "id": 1,
+      "category": "Events",
+      "categoryHi": "आयोजन",
+      "src": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800",
+      "caption": "Annual Function 2023",
+      "captionHi": "वार्षिक समारोह 2023"
+    },
+    {
+      "id": 2,
+      "category": "Students",
+      "categoryHi": "छात्र",
+      "src": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800",
+      "caption": "Classroom Session",
+      "captionHi": "कक्षा सत्र"
+    },
+    {
+      "id": 3,
+      "category": "Awards",
+      "categoryHi": "पुरस्कार",
+      "src": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&q=80&w=800",
+      "caption": "Best Student Award",
+      "captionHi": "सर्वश्रेष्ठ छात्र पुरस्कार"
+    },
+    {
+      "id": 4,
+      "category": "Community",
+      "categoryHi": "समुदाय",
+      "src": "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800",
+      "caption": "Food Distribution Drive",
+      "captionHi": "भोजन वितरण अभियान"
+    }
+  ],
+
+  "publications": [
+    {
+      "id": 1,
+      "title": "Samiti Darpan 2024-25",
+      "titleHi": "समिति दर्पण 2024-25",
+      "year": "2024-2025",
+      "coverImage": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600",
+      "description": "The annual magazine highlighting the achievements, stories, and financial reports of the Samiti.",
+      "descriptionHi": "समिति की उपलब्धियों, कहानियों और वित्तीय रिपोर्ट को हाइलाइट करने वाली वार्षिक पत्रिका।",
+      "highlights": [
+        "Chairman's Message",
+        "Topper's Interviews",
+        "Annual Audit Report",
+        "Social Impact Survey"
+      ],
+      "highlightsHi": [
+        "अध्यक्ष का संदेश",
+        "शीर्ष प्रदर्शकों के साक्षात्कार",
+        "वार्षिक लेखा परीक्षा रिपोर्ट",
+        "सामाजिक प्रभाव सर्वेक्षण"
+      ]
+    }
+  ],
+
+  "patrons": [
+    {
+      "id": 1,
+      "name": "श्री राजीव कुमार",
+      "nameEn": "Shri Rajiv Kumar",
+      "address": "मवाना, मेरठ, उत्तर प्रदेश - 250411",
+      "totalDonation": "₹50,00,000",
+      "currentYearDonation": "₹10,00,000",
+      "joiningYear": 2015,
+      "image": "https://i.pravatar.cc/250?img=10"
+    },
+    {
+      "id": 2,
+      "name": "श्रीमती सुनीता शर्मा",
+      "nameEn": "Smt. Sunita Sharma",
+      "address": "खतौली, मुजफ्फरनगर, उत्तर प्रदेश - 251315",
+      "totalDonation": "₹35,50,000",
+      "currentYearDonation": "₹7,50,000",
+      "joiningYear": 2018,
+      "image": "https://i.pravatar.cc/250?img=11"
+    },
+    {
+      "id": 3,
+      "name": "श्री अजय प्रजापति",
+      "nameEn": "Shri Ajay Prajapati",
+      "address": "शुकतीर्थ, मुजफ्फरनगर, उत्तर प्रदेश - 251309",
+      "totalDonation": "₹42,00,000",
+      "currentYearDonation": "₹8,50,000",
+      "joiningYear": 2016,
+      "image": "https://i.pravatar.cc/250?img=12"
+    }
+  ],
+
+  "committees": [
+    {
+      "year": 1991,
+      "termHi": "1991-1996",
+      "termEn": "1991-1996",
+      "members": [
+        {
+          "id": 1,
+          "nameHi": "संसार सिंह प्रजापति",
+          "nameEn": "Sansar Singh Prajapati",
+          "positionHi": "अध्यक्ष",
+          "positionEn": "President",
+          "image": "https://i.pravatar.cc/250?img=20"
+        },
+        {
+          "id": 2,
+          "nameHi": "पूरन सिंह प्रजापति",
+          "nameEn": "Puran Singh Prajapati",
+          "positionHi": "सचिव",
+          "positionEn": "Secretary",
+          "image": "https://i.pravatar.cc/250?img=21"
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    { "id": 1, "value": "10th_UP", "label": "10th UP Board" },
+    { "id": 2, "value": "12th_UP", "label": "12th UP Board" },
+    { "id": 3, "value": "10th_CBSE", "label": "10th CBSE Board" },
+    { "id": 4, "value": "12th_CBSE", "label": "12th CBSE Board" },
+    { "id": 5, "value": "10th_ICSE", "label": "10th ICSE Board" },
+    { "id": 6, "value": "12th_ICSE", "label": "12th ICSE Board" },
+    { "id": 7, "value": "Graduation_BA", "label": "BA (Bachelor of Arts)" },
+    { "id": 8, "value": "Graduation_BSc", "label": "BSc (Bachelor of Science)" },
+    { "id": 9, "value": "Graduation_BCom", "label": "BCom (Bachelor of Commerce)" },
+    { "id": 10, "value": "Graduation_BCA", "label": "BCA (Bachelor of Computer Applications)" },
+    { "id": 11, "value": "Graduation_BTech", "label": "BTech (Bachelor of Technology)" },
+    { "id": 12, "value": "Masters_MA", "label": "MA (Master of Arts)" },
+    { "id": 13, "value": "Masters_MSc", "label": "MSc (Master of Science)" },
+    { "id": 14, "value": "Masters_MBA", "label": "MBA (Master of Business Administration)" },
+    { "id": 15, "value": "Masters_MTech", "label": "MTech (Master of Technology)" },
+    { "id": 16, "value": "PhD", "label": "PhD" },
+    { "id": 17, "value": "MBBS", "label": "MBBS (Bachelor of Medicine, Bachelor of Surgery)" },
+    { "id": 18, "value": "BAMS", "label": "BAMS (Bachelor of Ayurvedic Medicine and Surgery)" },
+    { "id": 19, "value": "Other", "label": "Other" }
+  ]
+}

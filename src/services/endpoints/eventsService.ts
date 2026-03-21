@@ -1,6 +1,6 @@
 import { HttpClient } from '@/services/api/httpClient';
 import { API_ENDPOINTS } from '@/config/apiConfig';
-import { Event, PaginatedResponse } from '@/services/types/api.types';
+import type { Event, PaginatedResponse } from '@/services/types';
 
 /**
  * Events Service - Handles all event-related API calls for MPSS
