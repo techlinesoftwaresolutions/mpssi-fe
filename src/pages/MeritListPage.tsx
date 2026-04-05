@@ -1,44 +1,48 @@
-import React, { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import PopupInstructions from '../components/PopupInstructions';
-import { MeritFormContainer } from '../containers';
+import React from 'react';
+import { MeritListContainer } from '@/containers';
 
 /**
- * MeritListPage - Main Page Component
+ * MeritListPage - Page Wrapper Component
  * 
- * Orchestrates the merit registration flow:
- * 1. Shows PopupInstructions until user agrees
- * 2. Displays MeritFormContainer after agreement
- * 3. Smooth transition between both states
+ * Simple wrapper that:
+ * - Handles routing for this page
+ * - Renders the MeritListContainer which manages all logic and state
  * 
- * Uses AnimatePresence to prevent layout shift on popup dismiss
+ * Page Structure:
+ * Page (wrapper) → Container (logic) → Presenter (UI)
+ * 
+ * The MeritListContainer orchestrates:
+ * 1. PopupInstructions (shows instructions and requires agreement)
+ * 2. MeritFormContainer (shown after agreement)
+ * 
+ * With smooth transitions between both states
  */
 export const MeritListPage = () => {
-  const [isPopupVisible, setIsPopupVisible] = useState(true);
-  const [isAgreementChecked, setIsAgreementChecked] = useState(false);
-
-  const handlePopupClose = () => {
-    if (isAgreementChecked) {
-      setIsPopupVisible(false);
-    } else {
-      alert('कृपया पहले सहमति बॉक्स को चेक करें।');
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Popup - Overlay on top */}
-      <PopupInstructions
-        isVisible={isPopupVisible}
-        onClose={handlePopupClose}
-        isAgreementChecked={isAgreementChecked}
-        onAgreementChange={setIsAgreementChecked}
-      />
-
-      {/* Form - Smooth fade in after popup closes */}
-      <AnimatePresence mode="wait">
-        {!isPopupVisible && <MeritFormContainer key="form" />}
-      </AnimatePresence>
+      <MeritListContainer />
     </div>
   );
 };
+
+/**
+ * OLD CODE BELOW - EXTRACTED TO CONTAINER & PRESENTER
+ * This code has been refactored to follow the Container-Presenter pattern:
+ * - State management moved to MeritListContainer
+ * - UI rendering moved to MeritListPresenter
+ * - This page is now just a wrapper for routing
+ */
+
+/*
+REMOVED: isPopupVisible state
+REMOVED: isAgreementChecked state
+REMOVED: handlePopupClose handler
+REMOVED: onAgreementChange handler
+REMOVED: PopupInstructions component integration
+REMOVED: MeritFormContainer conditional rendering
+REMOVED: AnimatePresence for transitions
+
+For the original implementation, see:
+- @/containers/MeritListContainer.tsx (state & logic)
+- @/components/organisms/MeritListPresenter.tsx (UI only)
+*/

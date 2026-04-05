@@ -132,7 +132,7 @@ export const WelfarePresenter: React.FC<WelcomePresenterProps> = ({ expandedFaq,
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="p-6 sm:p-8 bg-blue-50 border-l-4 border-blue-600 rounded-xl">
               <p className="text-blue-900 font-semibold text-sm sm:text-base leading-relaxed">
-                <strong className="text-blue-700">📋 Selection Process:</strong> Applications are reviewed by the Scholarship Committee in August. Shortlisted candidates will be invited for a personal interview at the Sukhertaal head office.
+                <strong className="text-blue-700">📋 Selection Process:</strong> Applications are reviewed by the Scholarship Committee in August. Shortlisted candidates will be invited for a personal interview at the Shukteerth head office.
               </p>
             </motion.div>
           </motion.div>

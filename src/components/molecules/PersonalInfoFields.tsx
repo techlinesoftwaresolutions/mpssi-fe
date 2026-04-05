@@ -41,7 +41,7 @@ export const PersonalInfoFields: React.FC<PersonalInfoFieldsProps> = ({
           name="fullName"
           value={formData.fullName}
           onChange={onChange}
-          placeholder="Enter your full name"
+          placeholder="Neeraj Prajapati"
           error={!!errors.fullName}
         />
       </FormGroup>
@@ -57,7 +57,7 @@ export const PersonalInfoFields: React.FC<PersonalInfoFieldsProps> = ({
           name="email"
           value={formData.email}
           onChange={onChange}
-          placeholder="Enter your email address"
+          placeholder="techlinesoftwaresolutions@gmail.com"
           error={!!errors.email}
         />
       </FormGroup>

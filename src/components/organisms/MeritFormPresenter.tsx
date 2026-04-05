@@ -14,6 +14,10 @@ import {
 import { MeritFormData, ValidationErrors, SubmitStatus, OTPVerificationStatus } from '../../containers/MeritFormContainer';
 
 interface MeritFormPresenterProps {
+  /* Submission Method */
+  selectedMethod: 'download' | 'online' | null;
+  onSelectMethod: (method: 'download' | 'online') => void;
+  
   /* Form Data */
   formData: MeritFormData;
   validationErrors: ValidationErrors;
@@ -62,6 +66,8 @@ interface MeritFormPresenterProps {
  * No state management, no business logic, only UI rendering.
  */
 export const MeritFormPresenter: React.FC<MeritFormPresenterProps> = ({
+  selectedMethod,
+  onSelectMethod,
   formData,
   validationErrors,
   onFormChange,
@@ -116,62 +122,61 @@ export const MeritFormPresenter: React.FC<MeritFormPresenterProps> = ({
           </div>
         </section>
 
-        {/* Submission Choice Section */}
-        <section className="w-full py-12 sm:py-16 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        {/* Submission Choice Section - Download Banner */}
+        <section className="w-full py-12 sm:py-16 bg-gradient-to-r from-saffron-500 via-saffron-600 to-orange-600 text-white relative overflow-hidden">
+          {/* Decorative Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -ml-32 -mt-32"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mb-48"></div>
+          </div>
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-5xl">
+            {/* Main Download Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15 }}
-              className="mb-10"
+              transition={{ delay: 0.1 }}
+              className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 sm:p-10 mb-8 border border-white/20"
             >
-              <h2 className="text-2xl font-bold font-heading text-gray-900 mb-6 text-center">Choose Your Submission Method</h2>
-              <div className="grid sm:grid-cols-2 gap-6">
-                {/* Download Form Option */}
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="p-6 border-2 border-saffron-600 rounded-xl hover:shadow-lg transition-all cursor-pointer"
-                >
-                  <div className="text-center">
-                    <BookOpen className="text-saffron-600 w-12 h-12 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Download Form</h3>
-                    <p className="text-gray-600 text-sm mb-4">Download the merit form, fill it offline, and submit it in person or via email.</p>
-                    <Button
-                      onClick={onDownloadForm}
-                      variant="primary"
-                      className="w-full"
-                    >
-                      Download Form
-                    </Button>
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8">
+                {/* Left Content */}
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="bg-saffron-100 p-3 rounded-lg">
+                      <BookOpen size={32} className="text-saffron-600" />
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-bold font-heading text-saffron-700">ऑफलाइन फॉर्म डाउनलोड करें</h2>
                   </div>
-                </motion.div>
+                  <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    फॉर्म को डाउनलोड करें, ध्यान से भरें, और अपने नज़दीकी केंद्र पर जमा करें। या फिर नीचे दिया गया फॉर्म भरिये और सीधे ऑनलाइन जमा करें। दोनों ही तरीके से आप मेरिट लिस्ट में रजिस्टर कर सकते हैं।
+                  </p>
+                </div>
 
-                {/* Fill Online Option */}
+                {/* Right Button */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="p-6 border-2 border-blue-600 rounded-xl hover:shadow-lg transition-all"
+                  className="flex-shrink-0"
                 >
-                  <div className="text-center">
-                    <ArrowRight className="text-blue-600 w-12 h-12 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Fill Online</h3>
-                    <p className="text-gray-600 text-sm mb-4">Fill the form here and submit with mobile number verification for instant confirmation.</p>
-                    <Button
-                      onClick={() => document.getElementById('completedQualification')?.scrollIntoView({ behavior: 'smooth' })}
-                      variant="primary"
-                      className="w-full"
-                    >
-                      Fill Form Now
-                    </Button>
-                  </div>
+                  <Button
+                    onClick={onDownloadForm}
+                    variant="primary"
+                    size="lg"
+                    className="bg-gradient-to-r from-saffron-600 to-orange-600 text-white hover:shadow-2xl whitespace-nowrap"
+                  >
+                    <ArrowRight size={20} className="mr-2" />
+                    डाउनलोड करें
+                  </Button>
                 </motion.div>
               </div>
             </motion.div>
+
           </div>
         </section>
 
-        {/* Status Messages */}
+        {/* Online Form Section */}
         <section className="w-full py-12 sm:py-16 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            {/* Status Messages */}
             <AnimatePresence>
               {submitStatus === 'success' && (
                 <motion.div
@@ -204,7 +209,6 @@ export const MeritFormPresenter: React.FC<MeritFormPresenterProps> = ({
               )}
             </AnimatePresence>
 
-            {/* Form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -213,7 +217,7 @@ export const MeritFormPresenter: React.FC<MeritFormPresenterProps> = ({
             >
               <form onSubmit={onSubmitForm}>
                 {/* Personal Information Section */}
-                <div className="mb-10">
+                <div id="personalInfoSection" className="mb-10">
                   <h2 className="text-2xl font-bold font-heading text-gray-900 mb-6 border-b-2 border-saffron-600 pb-3">
                     Personal Information
                   </h2>
@@ -333,7 +337,7 @@ export const MeritFormPresenter: React.FC<MeritFormPresenterProps> = ({
                   <Button
                     type="submit"
                     disabled={isSubmitting || isOtpVerified}
-                    loading={isSubmitting}
+                    isLoading={isSubmitting}
                     variant="primary"
                     size="lg"
                     className="flex-1"
@@ -383,7 +387,7 @@ export const MeritFormPresenter: React.FC<MeritFormPresenterProps> = ({
                 <Button
                   onClick={onSendOtp}
                   disabled={isOtpLoading}
-                  loading={isOtpLoading}
+                  isLoading={isOtpLoading}
                   variant="primary"
                   className="w-full mb-4"
                 >
@@ -421,7 +425,7 @@ export const MeritFormPresenter: React.FC<MeritFormPresenterProps> = ({
                     <Button
                       onClick={onVerifyOtp}
                       disabled={isOtpVerified || isOtpLoading || otpValues.some(v => !v)}
-                      loading={isOtpLoading}
+                      isLoading={isOtpLoading}
                       variant="primary"
                       className="w-full"
                     >

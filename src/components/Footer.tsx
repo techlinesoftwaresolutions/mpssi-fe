@@ -53,15 +53,15 @@ export const Footer = () => {
           <ul className="space-y-4 text-sm">
             <li className="flex items-start gap-3">
               <MapPin size={20} className="text-saffron-600 mt-0.5 shrink-0" />
-              <span className="leading-relaxed">Prajapati Bhawan, Purun Singh Awas,<br />Sukhertaal, Muzaffarnagar,<br />Uttar Pradesh, India</span>
+              <span className="leading-relaxed">Prajapati Bhawan, Purun Singh Awas,<br />Shukteerth, Muzaffarnagar,<br />Uttar Pradesh, India</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-saffron-600 shrink-0" />
-              <span>+91 90054 80808</span>
+              <span>+91 80109 93612</span>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={18} className="text-saffron-600 shrink-0" />
-              <span>prajapaticsf@gmail.com</span>
+              <span>mpssindia1991@gmail.com</span>
             </li>
           </ul>
         </div>

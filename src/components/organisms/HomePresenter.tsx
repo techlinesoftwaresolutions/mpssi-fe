@@ -101,7 +101,7 @@ export const HomePresenter: React.FC<HomePresenterProps> = ({
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed font-light">
-              Empowering students through education and social welfare initiatives in Sukhertaal, Muzaffarnagar since 1989.
+              Empowering students through education and social welfare initiatives in Shukteerth, Muzaffarnagar since 1989.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

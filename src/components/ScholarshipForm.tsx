@@ -52,7 +52,7 @@ export const ScholarshipForm = ({ onClose }: { onClose: () => void }) => {
         <body>
           <div class="header">
             <h1>Scholarship Application Form</h1>
-            <p>Maharishi Prajapati Shiksha Samiti, Sukhertaal</p>
+            <p>Maharishi Prajapati Shiksha Samiti, Shukteerth</p>
           </div>
 
           <div class="section">
@@ -217,7 +217,7 @@ export const ScholarshipForm = ({ onClose }: { onClose: () => void }) => {
     setTimeout(() => {
       generateAndDownloadPDF();
       setIsSubmitting(false);
-      alert(`✅ Application PDF Generated Successfully!\n\n📄 Your scholarship application has been created.\n\n1. A print window has opened\n2. Select "Save as PDF" from your printer options\n3. Choose a location and save the file\n\n📧 Next Steps:\nSubmit the PDF to the Samiti office at Sukhertaal or email to contact@mpssi.org`);
+      alert(`✅ Application PDF Generated Successfully!\n\n📄 Your scholarship application has been created.\n\n1. A print window has opened\n2. Select "Save as PDF" from your printer options\n3. Choose a location and save the file\n\n📧 Next Steps:\nSubmit the PDF to the Samiti office at Shukteerth or email to contact@mpssi.org`);
       onClose();
     }, 500);
   };
@@ -235,7 +235,7 @@ export const ScholarshipForm = ({ onClose }: { onClose: () => void }) => {
               <li>Click the "Generate Application" button at the bottom</li>
               <li>A print preview window will open automatically</li>
               <li>Choose <strong>PDF printer</strong> and click <strong>"Save"</strong></li>
-              <li>Your PDF is ready! Submit it to the Samiti office at Sukhertaal</li>
+              <li>Your PDF is ready! Submit it to the Samiti office at Shukteerth</li>
             </ol>
           </div>
         </div>

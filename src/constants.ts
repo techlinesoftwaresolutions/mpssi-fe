@@ -28,7 +28,7 @@ export const EVENTS: EventItem[] = [
     title: "Community Health Camp",
     date: "October 02, 2024",
     category: "Social",
-    description: "Free health checkup camp organized for the residents of Sukhertaal and nearby villages.",
+    description: "Free health checkup camp organized for the residents of Shukteerth and nearby villages.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"
   },
   {

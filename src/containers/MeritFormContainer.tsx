@@ -57,6 +57,9 @@ export const MeritFormContainer: React.FC = () => {
   const [formData, setFormData] = useState<MeritFormData>(INITIAL_FORM_DATA);
   const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
   
+  // Submission Method State
+  const [selectedMethod, setSelectedMethod] = useState<'download' | 'online' | null>(null);
+  
   // Submission State
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -465,6 +468,10 @@ Note: Submit this form by any of the following methods:
    */
   return (
     <MeritFormPresenter
+      /* Submission Method */
+      selectedMethod={selectedMethod}
+      onSelectMethod={setSelectedMethod}
+      
       /* Form Data */
       formData={formData}
       validationErrors={validationErrors}

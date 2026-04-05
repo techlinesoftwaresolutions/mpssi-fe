@@ -42,7 +42,7 @@ const App = () => {
         <div className="max-w-3xl mx-auto bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100">
           <div className="bg-saffron-600 p-8 text-white text-center">
             <h1 className="text-3xl font-bold font-heading">Scholarship Application</h1>
-            <p className="opacity-90 mt-2">Maharishi Prajapati Shiksha Samiti, Sukhertaal</p>
+            <p className="opacity-90 mt-2">Maharishi Prajapati Shiksha Samiti, Shukteerth</p>
           </div>
           <div className="p-8 md:p-12">
             <ScholarshipForm onClose={() => window.close()} />

@@ -1,18 +1,35 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MapPin, Phone, Mail, CheckCircle, AlertCircle } from 'lucide-react';
 import { Section } from '@/components/Section';
+import { FormGroup, ValidationMessage } from '@/components/molecules';
+import { ContactFormData, ValidationErrors, SubmitStatus } from '@/containers/ContactContainer';
+
+interface ContactPresenterProps {
+  formData: ContactFormData;
+  validationErrors: ValidationErrors;
+  onFormChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onSubmitForm: (e: React.FormEvent<HTMLFormElement>) => void;
+  onResetForm: () => void;
+  submitStatus: SubmitStatus;
+  isSubmitting: boolean;
+}
 
 /**
- * ContactPresenter - Pure UI Component
+ * ContactPresenter - Pure UI Component (Presenter)
  * Displays contact form and location information
+ * No state management, only rendering based on props
  */
-export const ContactPresenter: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    e.currentTarget.reset();
-  };
+export const ContactPresenter: React.FC<ContactPresenterProps> = ({
+  formData,
+  validationErrors,
+  onFormChange,
+  onSubmitForm,
+  onResetForm,
+  submitStatus,
+  isSubmitting
+}) => {
+
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-24 pb-16">
@@ -33,7 +50,7 @@ export const ContactPresenter: React.FC = () => {
                   <h4 className="font-black text-gray-900 uppercase tracking-widest text-xs mb-1">Our Location</h4>
                   <p className="text-gray-600 text-lg">
                     Maharishi Prajapati Shiksha Samiti,<br />
-                    Sukhertaal, Dist. Muzaffarnagar,<br />
+                    Shukteerth, Dist. Muzaffarnagar,<br />
                     Uttar Pradesh - 251309
                   </p>
                 </div>
@@ -45,7 +62,7 @@ export const ContactPresenter: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-black text-gray-900 uppercase tracking-widest text-xs mb-1">Direct Line</h4>
-                  <p className="text-gray-600 text-lg">+91 90054 80808</p>
+                  <p className="text-gray-600 text-lg">+91 80109 93612</p>
                 </div>
               </div>
 
@@ -55,60 +72,161 @@ export const ContactPresenter: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-black text-gray-900 uppercase tracking-widest text-xs mb-1">Email Support</h4>
-                  <p className="text-gray-600 text-lg">prajapaticsf@gmail.com</p>
+                  <p className="text-gray-600 text-lg">mpssindia1991@gmail.com</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-10 lg:p-14 rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-gray-100">
-            <form onSubmit={handleSubmit} className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="bg-white p-10 lg:p-14 rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-gray-100"
+          >
+            {/* Status Messages */}
+            <AnimatePresence>
+              {submitStatus === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-start gap-3"
+                >
+                  <CheckCircle className="text-green-600 shrink-0 mt-1" size={24} />
+                  <div>
+                    <h3 className="font-bold text-green-900">Message Sent Successfully!</h3>
+                    <p className="text-green-700 text-sm mt-1">Thank you for reaching out. We'll get back to you soon.</p>
+                  </div>
+                </motion.div>
+              )}
+
+              {submitStatus === 'error' && Object.keys(validationErrors).length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3"
+                >
+                  <AlertCircle className="text-red-600 shrink-0 mt-1" size={24} />
+                  <div>
+                    <h3 className="font-bold text-red-900">Please Fix the Errors</h3>
+                    <p className="text-red-700 text-sm mt-1">Some fields have errors. Please review and try again.</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <form onSubmit={onSubmitForm} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-xs font-black uppercase tracking-widest text-gray-500 ml-1">First Name</label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-6 py-4 border-2 border-slate-100 bg-slate-50 rounded-2xl focus:border-saffron-500 outline-none transition-all"
-                    placeholder="John"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-black uppercase tracking-widest text-gray-500 ml-1">Last Name</label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-6 py-4 border-2 border-slate-100 bg-slate-50 rounded-2xl focus:border-saffron-500 outline-none transition-all"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-black uppercase tracking-widest text-gray-500 ml-1">Email Address</label>
-                <input
-                  type="email"
+                <FormGroup
+                  label="First Name"
                   required
-                  className="w-full px-6 py-4 border-2 border-slate-100 bg-slate-50 rounded-2xl focus:border-saffron-500 outline-none transition-all"
-                  placeholder="john@example.com"
-                />
+                  error={validationErrors.firstName}
+                >
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={onFormChange}
+                    className={`w-full px-6 py-4 border-2 ${
+                      validationErrors.firstName ? 'border-red-500' : 'border-slate-100'
+                    } bg-slate-50 rounded-2xl focus:border-saffron-500 outline-none transition-all`}
+                    placeholder="Neeraj"
+                  />
+                </FormGroup>
+
+                <FormGroup
+                  label="Last Name"
+                  required
+                  error={validationErrors.lastName}
+                >
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={onFormChange}
+                    className={`w-full px-6 py-4 border-2 ${
+                      validationErrors.lastName ? 'border-red-500' : 'border-slate-100'
+                    } bg-slate-50 rounded-2xl focus:border-saffron-500 outline-none transition-all`}
+                    placeholder="Prajapati"
+                  />
+                </FormGroup>
               </div>
-              <div className="space-y-2">
-                <label className="text-xs font-black uppercase tracking-widest text-gray-500 ml-1">Your Message</label>
+
+              <div className="grid sm:grid-cols-2 gap-6">
+                <FormGroup
+                  label="Mobile Number"
+                  required
+                  error={validationErrors.mobile}
+                  helperText="We'll use this to follow up on your message"
+                >
+                  <input
+                    type="tel"
+                    name="mobile"
+                    value={formData.mobile}
+                    onChange={onFormChange}
+                    className={`w-full px-6 py-4 border-2 ${
+                      validationErrors.mobile ? 'border-red-500' : 'border-slate-100'
+                    } bg-slate-50 rounded-2xl focus:border-saffron-500 outline-none transition-all`}
+                    placeholder="9876543210"
+                  />
+                </FormGroup>
+
+                <FormGroup
+                  label="Email Address"
+                  error={validationErrors.email}
+                  helperText="Optional - leave blank if not applicable"
+                >
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={onFormChange}
+                    className={`w-full px-6 py-4 border-2 ${
+                      validationErrors.email ? 'border-red-500' : 'border-slate-100'
+                    } bg-slate-50 rounded-2xl focus:border-saffron-500 outline-none transition-all`}
+                    placeholder="techlinesoftwaresolutions@gmail.com"
+                  />
+                </FormGroup>
+              </div>
+
+              <FormGroup
+                label="Your Message"
+                required
+                error={validationErrors.message}
+                helperText="Please provide at least 10 characters"
+              >
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={onFormChange}
                   rows={5}
-                  required
-                  className="w-full px-6 py-4 border-2 border-slate-100 bg-slate-50 rounded-2xl focus:border-saffron-500 outline-none transition-all"
+                  className={`w-full px-6 py-4 border-2 ${
+                    validationErrors.message ? 'border-red-500' : 'border-slate-100'
+                  } bg-slate-50 rounded-2xl focus:border-saffron-500 outline-none transition-all resize-none`}
                   placeholder="How can we help you?"
                 ></textarea>
+              </FormGroup>
+
+              <div className="flex gap-4 pt-4">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="flex-1 bg-gray-900 text-white py-5 rounded-2xl font-black text-lg hover:bg-saffron-600 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all shadow-xl active:scale-95 uppercase tracking-widest"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+                <button
+                  type="button"
+                  onClick={onResetForm}
+                  className="flex-1 bg-slate-100 text-gray-900 py-5 rounded-2xl font-black text-lg hover:bg-slate-200 transition-all shadow-md active:scale-95 uppercase tracking-widest"
+                >
+                  Reset
+                </button>
               </div>
-              <button
-                type="submit"
-                className="w-full bg-gray-900 text-white py-5 rounded-2xl font-black text-lg hover:bg-saffron-600 transition-all shadow-xl active:scale-95 uppercase tracking-widest"
-              >
-                Send Message
-              </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </Section>
     </motion.div>
