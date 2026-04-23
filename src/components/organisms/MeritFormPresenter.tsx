@@ -122,54 +122,65 @@ export const MeritFormPresenter: React.FC<MeritFormPresenterProps> = ({
           </div>
         </section>
 
-        {/* Submission Choice Section - Download Banner */}
-        <section className="w-full py-12 sm:py-16 bg-gradient-to-r from-saffron-500 via-saffron-600 to-orange-600 text-white relative overflow-hidden">
-          {/* Decorative Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -ml-32 -mt-32"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mb-48"></div>
-          </div>
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-5xl">
-            {/* Main Download Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 sm:p-10 mb-8 border border-white/20"
-            >
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8">
-                {/* Left Content */}
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-saffron-100 p-3 rounded-lg">
-                      <BookOpen size={32} className="text-saffron-600" />
-                    </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold font-heading text-saffron-700">ऑफलाइन फॉर्म डाउनलोड करें</h2>
+        {/* Important Instructions Section */}
+        <section className="w-full py-8 sm:py-10 bg-blue-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-start justify-between">
+                <div className="flex gap-4 flex-1">
+                  <div className="flex-shrink-0">
+                    <AlertCircle className="text-blue-600" size={24} />
                   </div>
-                  <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                    फॉर्म को डाउनलोड करें, ध्यान से भरें, और अपने नज़दीकी केंद्र पर जमा करें। या फिर नीचे दिया गया फॉर्म भरिये और सीधे ऑनलाइन जमा करें। दोनों ही तरीके से आप मेरिट लिस्ट में रजिस्टर कर सकते हैं।
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-gray-900 text-lg mb-3">आप मेरिट लिस्ट में रजिस्टर कर सकते हैं</h3>
+                    <div className="mb-4 space-y-4">
+                      <div className="flex items-center gap-3">
+                        <p className="text-gray-800 text-sm font-medium flex-1"><span className="text-blue-600 font-bold">तरीका 1:</span> फॉर्म को डाउनलोड करें, ध्यान से भरें, और अपने नज़दीकी केंद्र पर जमा करें।</p>
+                        <a
+                          href="/images/publication.pdf"
+                          download="publication.pdf"
+                          className="flex-shrink-0 hover:opacity-80 transition-opacity"
+                        >
+                          <img src="/images/download.svg" alt="Download" className="w-8 h-8" />
+                        </a>
+                      </div>
+                      <p className="text-gray-800 text-sm font-medium"><span className="text-blue-600 font-bold">तरीका 2:</span> नीचे दिया गया फॉर्म भरिये और सीधे ऑनलाइन जमा करें।</p>
+                    </div>
+                    <h4 className="font-bold text-gray-900 text-base mb-3">दिशा-निर्देश (फॉर्म भरने से पहले ध्यानपूर्वक पढ़ें)</h4>
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      <li className="flex gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>यह फॉर्म महर्षि प्रजापति समिति, शुक्रतीर्थ के लिए डेटा एकत्र करेगा, जिसका कोई अन्य उपयोग नहीं किया जाएगा।</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>कृपया सभी विवरण मार्कशीट के अनुसार और पूरी जिम्मेदारी से भरें। बाद में सत्यापन किया जाएगा।</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>कृपया पूरा फॉर्म अंग्रेज़ी में ही भरें, क्योंकि हिंदी में भरने में आपको कठिनाई हो सकती है।</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>यह फॉर्म केवल शैक्षणिक सत्र 2025-26 के लिए मान्य है।</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>इस फॉर्म को केवल वे अभ्यर्थी भरें जिन्होंने इस वर्ष परीक्षा उत्तीर्ण की है।</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>10वीं में कम से कम 75% या 12वीं में कम से कम 70% अंक प्राप्त होने चाहिए।</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-blue-600 font-bold">•</span>
+                        <span>ग्रेजुएशन में 60% और उससे अधिक अंक प्राप्त होने चाहिए।</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-
-                {/* Right Button */}
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="flex-shrink-0"
-                >
-                  <Button
-                    onClick={onDownloadForm}
-                    variant="primary"
-                    size="lg"
-                    className="bg-gradient-to-r from-saffron-600 to-orange-600 text-white hover:shadow-2xl whitespace-nowrap"
-                  >
-                    <ArrowRight size={20} className="mr-2" />
-                    डाउनलोड करें
-                  </Button>
-                </motion.div>
               </div>
-            </motion.div>
-
+            </div>
           </div>
         </section>
 

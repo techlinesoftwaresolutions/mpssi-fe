@@ -12,7 +12,6 @@ import { MeritListContainer } from '@/containers';
  * Page (wrapper) → Container (logic) → Presenter (UI)
  * 
  * The MeritListContainer orchestrates:
- * 1. PopupInstructions (shows instructions and requires agreement)
  * 2. MeritFormContainer (shown after agreement)
  * 
  * With smooth transitions between both states
@@ -38,7 +37,6 @@ REMOVED: isPopupVisible state
 REMOVED: isAgreementChecked state
 REMOVED: handlePopupClose handler
 REMOVED: onAgreementChange handler
-REMOVED: PopupInstructions component integration
 REMOVED: MeritFormContainer conditional rendering
 REMOVED: AnimatePresence for transitions
 

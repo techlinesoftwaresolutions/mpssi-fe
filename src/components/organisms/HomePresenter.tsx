@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, BookOpen, Users, Award, Heart, ZoomIn } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Award, Heart, ZoomIn, Download, Calendar } from 'lucide-react';
 import { Section } from '@/components/Section';
 import ProfileCard from '@/components/ProfileCard';
-import { EVENTS, HOME_HIGHLIGHTS } from '@/constants';
+import { EVENTS, HOME_HIGHLIGHTS, PUBLICATIONS, PATRONS } from '@/constants';
 import { HighlightItem } from '@/types';
 
 interface Founder {
@@ -48,23 +48,35 @@ export const HomePresenter: React.FC<HomePresenterProps> = ({
             <p className="text-sm sm:text-base md:text-lg text-gray-600">Visionary Leaders</p>
           </div>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 justify-items-center">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-center items-stretch">
               {teamFounders.map((founder, index) => (
                 <motion.div
                   key={founder.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2 }}
+                  className="w-full md:w-[40%] flex flex-col"
                 >
-                  <ProfileCard
-                    image={founder.image}
-                    nameHi={founder.nameHi}
-                    nameEn={founder.nameEn}
-                    designationHi={founder.designationHi}
-                    designationEn={founder.designationEn}
-                    bioHi={founder.bio?.hi}
-                    bioEn={founder.bio?.en}
-                  />
+                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full">
+                    {/* Image Container - Top */}
+                    <div className="w-full h-64 sm:h-72 md:h-80 overflow-hidden bg-gray-100 flex-shrink-0">
+                      <img
+                        src={founder.image}
+                        alt={`${founder.nameEn} - ${founder.designationEn}`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+
+                    {/* Content Container - Bottom */}
+                    <div className="p-6 sm:p-8 flex flex-col justify-center flex-grow">
+                      <h3 className="text-xl sm:text-2xl font-bold font-heading text-gray-900 mb-1">
+                        {founder.nameHi} <span className="text-sm sm:text-base font-normal text-gray-600">({founder.designationHi})</span>
+                      </h3>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        Shukrateerth, Muzaffarnagar, Uttar Pradesh 251001
+                      </p>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -106,7 +118,10 @@ export const HomePresenter: React.FC<HomePresenterProps> = ({
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <button
-                onClick={() => onNavigate('publications')}
+                onClick={() => {
+                  const element = document.getElementById('publications-section');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="w-full sm:w-auto bg-saffron-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-2xl font-bold text-sm sm:text-base hover:bg-saffron-700 transition-all shadow-lg sm:shadow-2xl hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
               >
                 <BookOpen size={18} /> View Magazine
@@ -206,6 +221,117 @@ export const HomePresenter: React.FC<HomePresenterProps> = ({
               </div>
             </motion.div>
           ))}
+        </div>
+      </Section>
+
+      {/* Publications Section */}
+      <div id="publications-section">
+        <Section title="Knowledge Repository" subtitle="Our Publications" className="w-full bg-white">
+        <div className="max-w-5xl mx-auto space-y-12">
+          {PUBLICATIONS.map((pub) => (
+            <motion.div
+              key={pub.id}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-100"
+            >
+              <div className="md:w-2/5 relative group cursor-pointer overflow-hidden bg-slate-200">
+                <img
+                  src={pub.coverImage}
+                  alt={pub.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8 text-center">
+                  <div className="text-white transform translate-y-10 group-hover:translate-y-0 transition-transform">
+                    <BookOpen size={48} className="mx-auto mb-4 text-saffron-500" />
+                    <p className="font-bold text-xl">Preview Magazine</p>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-3/5 p-10 lg:p-14 flex flex-col">
+                <div className="flex items-center justify-between mb-8">
+                  <h3 className="text-3xl font-bold font-heading text-gray-900 leading-tight">{pub.title}</h3>
+                  <span className="bg-saffron-100 text-saffron-700 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">
+                    {pub.year}
+                  </span>
+                </div>
+                <p className="text-gray-600 text-lg mb-10 leading-relaxed italic">{pub.description}</p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                  {pub.highlights.map((h, i) => (
+                    <div key={i} className="flex items-center gap-3 text-gray-700 bg-slate-50 p-4 rounded-2xl border border-slate-100 group">
+                      <div className="w-3 h-3 bg-saffron-500 rounded-full group-hover:scale-125 transition-transform" />
+                      <span className="font-semibold">{h}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <button
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = `/images/publication.pdf`;
+                    link.download = 'publication.pdf';
+                    link.target = '_blank';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className="inline-flex items-center gap-3 bg-saffron-600 hover:bg-saffron-700 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:scale-105 active:scale-95"
+                >
+                  <Download size={18} /> Download PDF
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+      </div>
+
+      {/* Patrons Section */}
+      <Section title="Generous Patrons" subtitle="Our Valued Supporters" className="w-full bg-gradient-to-br from-white via-saffron-50/30 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-16 text-center">
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              We express our heartfelt gratitude to our esteemed patrons who have supported our mission through generous
+              contributions. Their philanthropic spirit has enabled us to reach more communities and transform lives through
+              education.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PATRONS.map((patron, index) => (
+              <motion.div
+                key={patron.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100"
+              >
+                {/* Image Section */}
+                <div className="flex justify-center pt-8 pb-4">
+                  <div className="relative w-48 h-48 rounded-full overflow-hidden bg-gradient-to-br from-saffron-100 to-saffron-50 flex items-center justify-center border-4 border-saffron-200 shadow-lg">
+                    {patron.image ? (
+                      <img src={patron.image} alt={patron.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <Heart size={80} className="text-saffron-400 opacity-30" />
+                    )}
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-1 font-heading">{patron.name}</h3>
+                  <p className="text-saffron-600 text-sm font-bold uppercase tracking-widest mb-4">{patron.address}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">Donation: {patron.totalDonation}</p>
+
+                  <div className="flex items-center gap-2 text-gray-500 text-xs">
+                    <Calendar size={14} />
+                    <span>Joined {patron.joiningYear}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </Section>
 

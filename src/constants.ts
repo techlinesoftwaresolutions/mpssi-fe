@@ -5,8 +5,6 @@ export const NAV_LINKS = [
   { name: 'About Us', path: 'about' },
   { name: 'Committee', path: 'committee' },
   { name: 'Events', path: 'events' },
-  { name: 'Patrons', path: 'patrons' },
-  { name: 'Publications', path: 'publications' },
   { name: 'Gallery', path: 'gallery' },
   { name: 'Welfare', path: 'welfare' },
   { name: 'Scholarship', path: 'scholarship' },

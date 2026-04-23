@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from 'react';
-import { MeritListPresenter } from '@/components/organisms';
+import React from 'react';
+import { MeritFormContainer } from '@/containers';
 
 /**
  * MeritListContainer - Smart Component (Container)
@@ -15,30 +15,9 @@ import { MeritListPresenter } from '@/components/organisms';
  * The UI rendering is delegated to MeritListPresenter.
  */
 export const MeritListContainer: React.FC = () => {
-  // ==================== State ====================
-  const [isPopupVisible, setIsPopupVisible] = useState(true);
-  const [isAgreementChecked, setIsAgreementChecked] = useState(false);
-
-  // ==================== Handlers ====================
-  const handlePopupClose = useCallback(() => {
-    if (isAgreementChecked) {
-      setIsPopupVisible(false);
-    } else {
-      alert('कृपया पहले सहमति बॉक्स को चेक करें।');
-    }
-  }, [isAgreementChecked]);
-
-  const handleAgreementChange = useCallback((checked: boolean) => {
-    setIsAgreementChecked(checked);
-  }, []);
-
   // ==================== Render ====================
+  // Form shows directly without popup
   return (
-    <MeritListPresenter
-      isPopupVisible={isPopupVisible}
-      isAgreementChecked={isAgreementChecked}
-      onPopupClose={handlePopupClose}
-      onAgreementChange={handleAgreementChange}
-    />
+    <MeritFormContainer />
   );
 };

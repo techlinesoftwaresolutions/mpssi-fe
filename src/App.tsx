@@ -9,8 +9,6 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Committee } from './pages/Committee';
 import { Events } from './pages/Events';
-import { Patrons } from './pages/Patrons';
-import { Publications } from './pages/Publications';
 import { Gallery } from './pages/Gallery';
 import { Welfare } from './pages/Welfare';
 import { Contact } from './pages/Contact';
@@ -62,10 +60,6 @@ const App = () => {
         return <Committee />;
       case 'events':
         return <Events />;
-      case 'patrons':
-        return <Patrons />;
-      case 'publications':
-        return <Publications />;
       case 'gallery':
         return <Gallery />;
       case 'welfare':
